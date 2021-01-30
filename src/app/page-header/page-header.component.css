@@ -1,13 +1,16 @@
-
+nav{
+	position: fixed;
+}
 nav {
 	margin: 0px auto 0;
 
-	position: relative;
+	position: fixed;
 	width: 100%;
 	height: 50px;
 	background-color: #34495e;
 	border-radius: 8px;
 	font-size: 0;
+	
 }
 nav a{
 	line-height: 50px;
@@ -132,8 +135,7 @@ nav .Search{
 }
 }
 @media screen and (max-width:670px) { 
-
-    a:nth-child(1) {
+  a:nth-child(1) {
         width: 80px;
     }
     a:nth-child(2) {
@@ -170,9 +172,18 @@ nav .start-contact, a:nth-child(5):hover~.animation {
 	width: 90px;
 	left: 470px;
 	background-color: #3498db;
+	display:none
 }
 nav .Login{
    
     margin-top: -4px;
 }
+button:nth-child(1){
+	width: 56px;
+}
+
+button:nth-child(2){
+	width: 75px;
+}
+
     }
