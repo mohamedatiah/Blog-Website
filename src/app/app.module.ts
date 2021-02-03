@@ -8,7 +8,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { ContactComponent } from './contact/contact.component';
-
+import{HttpClientModule} from '@angular/common/http'
+import {HttpClient}from'@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,7 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

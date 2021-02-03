@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { from } from 'rxjs';
-import { Blog} from '../classes/blog'
+import { User} from '../classes/user'
 import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class BlogService {
+export class UserService {
 
   constructor(public http:HttpClient) { }
-  getdata(){
-    return this.http.get<Blog[]>('https://myblogger22.herokuapp.com');
+ 
+  getusers(){
+    return this.http.get<User[]>(' http://myblogger22.herokuapp.com/users/');
+   
   }
-
 }
 
 
