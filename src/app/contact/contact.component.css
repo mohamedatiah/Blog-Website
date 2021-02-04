@@ -1,0 +1,17 @@
+#img{
+    width: 50%;
+    height: 600px;
+     margin-left: 560px; 
+    /* float: right; */
+}
+#card{
+    width:80%;
+    margin-left: 170px;
+}
+#paragraph{
+    width: 40%;
+   
+}
+#but{
+    border-radius:20px ;
+}

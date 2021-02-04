@@ -9,12 +9,17 @@ html {
     font-family: "Poppins", sans-serif;
     height: 100vh;
   }
+  .container{
+    height: 600px;
+  }
   
   a {
     color: #92badd;
-    display:inline-block;
+    display:block;
     text-decoration: none;
     font-weight: 400;
+    position:relative;
+    margin-top: -30px;
   }
   
   h2 {
@@ -53,6 +58,7 @@ html {
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: center;
+   
   }
   
   #formFooter {
@@ -62,6 +68,7 @@ html {
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
+  
   }
   
   

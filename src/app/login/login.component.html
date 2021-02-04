@@ -6,39 +6,37 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<div class="wrapper fadeInDown">
+<div class="wrapper fadeInDown container">
   <div id="formContent">
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="../../assets/usericon.png" id="icon" alt="User Icon" />
-    </div>
+      <div class="fadeIn first">
+        <img src="../../assets/usr2.jpeg" id="icon" alt="User Icon" />
+      </div>
 
-    <!-- Login Form -->
-    <form>
-      <input
-        required
-        type="text"
-        id="username"
-        class="fadeIn second"
-        name="username"
-        placeholder="username"
-      />
-      <input
-        required
-        type="password"
-        id="password"
-        class="fadeIn third"
-        name="login"
-        placeholder="password"
-      />
-      <input type="submit" class="fadeIn fourth" value="Log In" />
-    </form>
-
-    <!-- New user -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Don't have account?</a>
-    </div>
+        <!-- Login Form -->
+        <form>
+          <input
+            required
+            type="text"
+            id="username"
+            class="fadeIn second"
+            name="username"
+            placeholder="username"
+          />
+          <input
+            required
+            type="password"
+            id="password"
+            class="fadeIn third"
+            name="login"
+            placeholder="password"
+          />
+          <input type="submit" class="fadeIn fourth" value="Log In" />
+          
+        </form>
+        <a class="underlineHover" routerLink="register" (click)="go()">Don't have account?</a>
+   
   </div>
 </div>
