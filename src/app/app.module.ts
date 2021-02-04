@@ -9,7 +9,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { ContactComponent } from './contact/contact.component';
 import{HttpClientModule} from '@angular/common/http'
-import {HttpClient}from'@angular/common/http'
+import {HttpClient}from'@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,9 @@ import {HttpClient}from'@angular/common/http'
     HomePageComponent,
     ProfileComponent,
     AddPostComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
