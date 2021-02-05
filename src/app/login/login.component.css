@@ -1,17 +1,18 @@
 
 /* BASIC */
 
-html {
-    background-color: #56baed;
-  }
+html{
+      background-color: #56baed;
+   }
   
   body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
   }
-  .container{
+.container
+{
     height: 600px;
-  }
+}
   
   a {
     color: #92badd;
@@ -266,5 +267,23 @@ html {
   
   #icon {
     width:60%;
+   
   }
+  p{
+    color:rgb(179, 38, 38);
+  }
+  #wrongUserName{
+    display: block;
   
+  
+  }
+  #wrongpassword{
+    display: block;
+  }
+  #ExistingUser{
+    position: relative;
+   
+  }
+  img{
+    height: 20%;
+  }

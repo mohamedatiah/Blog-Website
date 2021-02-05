@@ -1,12 +1,13 @@
 #img{
     width: 50%;
-    height: 600px;
+    height: 60%px;
      margin-left: 560px; 
     /* float: right; */
 }
 #card{
+    margin-top: 50px;
     width:80%;
-    margin-left: 170px;
+    margin-left: 100px;
 }
 #paragraph{
     width: 40%;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BlogService } from '../services/blog.service';
 
 @Component({
@@ -7,8 +8,14 @@ import { BlogService } from '../services/blog.service';
   styleUrls: ['./page-header.component.css']
 })
 export class PageHeaderComponent implements OnInit {
+  constructor(public router:Router){router.navigateByUrl("/home")}
+c(e){
+  if(e.target.innerHTML=='home'){
+       
+  }
+}
+ 
 
-  constructor(){}
   
   ngOnInit(): void {
   }
