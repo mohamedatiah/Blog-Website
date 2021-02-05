@@ -3,7 +3,5 @@ export class User {
         ,public lastname:string,public email:string,public age:number,followers:User,followings:User,
         public image:string
         )
-        {
-
-        }
+        {}
 }

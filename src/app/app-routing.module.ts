@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 
 
 
+
   const routes: Routes = [
     {path:'home',component:HomePageComponent},
     {path:"profile",component:ProfileComponent},
@@ -18,7 +19,7 @@ import { RegisterComponent } from './register/register.component';
     {path:"contact",component:ContactComponent},
     {path:"register",component:RegisterComponent},
     {path:"login",component:LoginComponent},
-  
+    {path:"notfound",component:NotFoundComponent}
   ]
 
 
