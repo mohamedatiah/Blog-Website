@@ -17,16 +17,16 @@
    </div>
    <div class="footer">
        <div class="likes" class="inline">
-            <i class="fa fa-thumbs-up fa-2x"></i>
+            <i class="fa fa-thumbs-up fa-2x"  [class.i]="addlike==true"  (click)="like($event)"></i>
             <span>Like</span>
        </div>
        <div class="comments" class="inline">
-            <i class="fa fa-comment fa-2x" (click)="addcomment()"></i>
+            <i class="fa fa-comment fa-2x" (click)="addcomment($event)" ></i>
             <span>comments</span>
        </div>
 
        <div class="Follow" class="inline">
-            <i class="fa fa-users fa-2x"></i>
+            <i class="fa fa-users fa-2x" (click)="follow($event)"></i>
             <span>Follow</span>
        </div>
       
@@ -39,8 +39,8 @@
   
 </div>
 <div class="addcomment" *ngIf="displayAddComment==true">
-<input type="text"  #data minlength="5" maxlength="50">
-<button type="button" (click)="confirmAddcomment($event,data.value)">Comment</button>
+     <input type="text"  #data minlength="5" maxlength="50">
+     <button type="button" (click)="confirmAddcomment($event,data.value)">Comment</button>
 </div>
 <div style="height: 15px"></div>
 </div>

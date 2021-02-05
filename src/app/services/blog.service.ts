@@ -14,6 +14,9 @@ export class BlogService {
   addpost(blog:Blog){
     return this.http.post('https://myblogger22.herokuapp.com/',blog);
   }
+  follow(){
+    
+  }
 
 }
 
