@@ -5,6 +5,9 @@
     <i class="fa fa-image fa-2x" data-toggle="tooltip" data-placement="right" title="Add Image"></i>
     <!-- (click)="addimage()" -->
    
-    <textarea class="form-control z-depth-1" id="area" rows="4" placeholder="Write what's on your mind...!"></textarea>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <textarea 
+    [(ngModel)]='userInput'
+    class="form-control z-depth-1" id="area" rows="4" placeholder="Write what's on your mind...!"></textarea>
+    <button class="btn btn-primary" type="submit" (click)="addPost()">Submit</button>
+    <p >Sorry,Minumum Length For Post Is 9 Charcter</p>
   </div>

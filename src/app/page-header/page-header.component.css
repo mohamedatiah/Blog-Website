@@ -1,5 +1,6 @@
 nav{
 	position: fixed;
+	z-index: 1;
 }
 nav {
 	margin: 0px auto 0;

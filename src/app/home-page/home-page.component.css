@@ -84,6 +84,9 @@ background-color: #f7f7f7;
 i{
    color:rgba(65, 70, 136, 0.644)
 }
+.i{
+    color: blue;
+}
 
 i:hover{
     transform: scale(1.5);
@@ -108,8 +111,34 @@ margin-top: 4px;
 }
 .comments{
    background-color: darkblue;
-   
-}hr{
+}
+hr{
     height: 40px;
     color: floralwhite;
+}
+
+input[type="text"]{
+    text-align: center;
+    margin-left: 410px;
+    width: 500px;
+    margin-top: 10px;
+    background-color: rgb(255, 249, 249);
+    border-radius: 10px;
+    height: 50px;
+    outline: none;
+    margin-right: 25px;
+    
+}
+.addcomment{
+    display: inline-block;
+}
+.addcomment button{
+color: rgb(95, 97, 194);
+border: none;
+border-radius: 20px;
+height: 45px;
+width: 110px;
+}
+.addcomment button:hover{
+    background-color: blue;
 }
