@@ -84,6 +84,9 @@ background-color: #f7f7f7;
 i{
    color:rgba(65, 70, 136, 0.644)
 }
+.i{
+    color: blue;
+}
 
 i:hover{
     transform: scale(1.5);
@@ -135,4 +138,7 @@ border: none;
 border-radius: 20px;
 height: 45px;
 width: 110px;
+}
+.addcomment button:hover{
+    background-color: blue;
 }
