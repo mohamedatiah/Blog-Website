@@ -2,26 +2,29 @@
 <br>
  <h2 class="bg-primary" >Add your post heree :) !</h2>   
  <br>
- <form  (ngSubmit)="addPost()">
+ <!-- [formGroup] ="postForm" (ngSubmit)="addPost()" -->
+ <form  >
 <div class="form-group shadow-textarea" id="text">
    <div class="form-inline">
-   <input type="text" class="form-control" id="title" placeholder="Title"  [(ngModel)]='blog.title'[ngModelOptions]="{standalone: true}"/>
-  <!-- <button class="btn btn-primary">Add title</button> -->
+   <input type="text" class="form-control"  id="title" placeholder="Title" [(ngModel)]='blog.title' [ngModelOptions]="{standalone: true}"/>
+   <!-- [(ngModel)]='blog.title'[ngModelOptions]="{standalone: true}" -->
   <div class="browse-button">
  <div id="upload_button">
    <label>
  <i class="fa fa-image fa-2x  btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add Image" ></i>
- <input   [(ngModel)]='blog.image' type="file" class="btn btn-primary"  id="UploadedImg" placeholder="Add photo"  accept="image/png, image/jpeg ,image/jpg" [ngModelOptions]="{standalone: true}"/>
+ <!-- <input  (change)="uploadFile($event)" type="file" class="btn btn-primary"  id="UploadedImg" placeholder="Add photo"  accept="image/png, image/jpeg ,image/jpg" /> -->
+ <!-- [ngModelOptions]="{standalone: true}" -->
+ <!-- (change)="uploadFile($event)" -->
 </label>
  </div>
  
   </div>
   </div>
-  <input  type="text" class="form-control" id="tags" placeholder="Tags" [(ngModel)]='blog.tags' [ngModelOptions]="{standalone: true}"/>
+  <input  type="text" class="form-control" id="tags" placeholder="Tags" [(ngModel)]='blog.tags'[ngModelOptions]="{standalone: true}" />
+  <!-- [(ngModel)]='blog.tags' [ngModelOptions]="{standalone: true}" -->
 
-  <textarea [(ngModel)]='blog.body'class="form-control z-depth-1" id="area" rows="4" placeholder="Write what's on your mind...!" [ngModelOptions]="{standalone: true}"></textarea>
-
+  <textarea class="form-control z-depth-1"  id="area" rows="4" placeholder="Write what's on your mind...!" [(ngModel)]='blog.body' [ngModelOptions]="{standalone: true}"></textarea>
+  <!-- [(ngModel)]='blog.body' [ngModelOptions]="{standalone: true}" -->
   <button class="btn btn-primary" type="submit" (click)="addPost()">Submit</button>
-  <!-- <p >Sorry,Minumum Length For Post Is 9 Charcter</p> -->
   </div>
   </form>

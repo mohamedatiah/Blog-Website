@@ -15,6 +15,9 @@ import { RegisterComponent } from './register/register.component'
 import {FormsModule } from '@angular/forms'
 import { AuthGuard } from './guards/auth.guard';
 import {  CustomInterceptor } from './services/auth-interceptor.service';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,7 @@ import {  CustomInterceptor } from './services/auth-interceptor.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule,FormsModule
+    AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule
   ],
   providers: [AuthGuard,{ provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }],
   bootstrap: [AppComponent]
