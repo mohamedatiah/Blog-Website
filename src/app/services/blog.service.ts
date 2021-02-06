@@ -11,10 +11,11 @@ export class BlogService {
   getdata(){
     return this.http.get<Blog[]>('https://myblogger22.herokuapp.com');
   }
+  // ,formData:FormData
   addpost(blog:Blog){
     return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/add',blog);
     //with image
-    // return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs',blog);
+   //  return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs',{blog,formData});
   }
   searchByTitle(title:string){
     return this.http.get<Blog[]>(`https://myblogger22.herokuapp.com/blogs/title/${title}`);

@@ -20,7 +20,7 @@ export class AddPostComponent implements OnInit {
   body:string;
   tags:string;
   title:string;
-  image:string;
+  //image:string;
   //d:string="";
   //myblog:Blob=null
   postError:boolean=false;
@@ -28,19 +28,8 @@ export class AddPostComponent implements OnInit {
   myDate= new Date();
 
    blog:Blog= new Blog([" "],this.myDate,[''],'','','','');
-
-  constructor(public router:Router,public blogData:BlogService,public http:HttpClient  ,private formBuilder: FormBuilder) { 
-    // this.postForm=new FormGroup({
-    // title: new FormControl(null),
-    // body: new FormControl(null),
-    // tags:new FormControl(null),
-    // image:new FormControl(null),
-
-
-      
-    // })
-  
-  }
+  image:File;
+  constructor(public router:Router,public blogData:BlogService,public http:HttpClient  ,private formBuilder: FormBuilder) { }
   // uploadFile(event:Event) {
   //   // const file = (event.target as HTMLInputElement).files[0];
   //   // this.postForm.patchValue({
@@ -59,16 +48,27 @@ export class AddPostComponent implements OnInit {
     //   this.postError=false;
      
     // }
+   
+    //  console.log("hello")
+    //  let formData=new FormData();
+    //  formData.append('photo',this.image);
+    //  this.blogData.addpost(this.blog,formData).subscribe(
+    //   a=>
+    // this.router.navigateByUrl('profile')
+    // )
     this.blogData.addpost(this.blog).subscribe(
       a=>
-    this.router.navigateByUrl('profile')
+    this.router.navigateByUrl('home')
     )
+    
+    
   }
+  // uploadFile(event:any){
+  //   const filelist:FileList=event.target.files;
+  //   this.image=filelist[0];
+  // }
   ngOnInit(): void {
-    this.postForm=this.formBuilder.group({
-     
-
-    })
+  
   }
 
 }
