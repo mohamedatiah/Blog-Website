@@ -11,6 +11,9 @@ export class BlogService {
   getdata(){
     return this.http.get<Blog[]>('https://myblogger22.herokuapp.com');
   }
+  addpost(blog:Blog){
+    return this.http.post('https://myblogger22.herokuapp.com/',blog);
+  }
 
 }
 

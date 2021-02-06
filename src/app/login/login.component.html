@@ -6,39 +6,46 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<div class="wrapper fadeInDown">
+<div class="wrapper fadeInDown container">
   <div id="formContent">
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="../../assets/usericon.png" id="icon" alt="User Icon" />
-    </div>
+      <div class="fadeIn first">
+        <p *ngIf="!(this.UsersData.LogedIn())">Please Login To Interact With Our Application</p>
+        <img src="../../assets/usr2.jpeg" id="icon" alt="User Icon" />
+      </div>
 
-    <!-- Login Form -->
-    <form>
-      <input
-        required
-        type="text"
-        id="username"
-        class="fadeIn second"
-        name="username"
-        placeholder="username"
-      />
-      <input
-        required
-        type="password"
-        id="password"
-        class="fadeIn third"
-        name="login"
-        placeholder="password"
-      />
-      <input type="submit" class="fadeIn fourth" value="Log In" />
-    </form>
+        <!-- Login Form -->
+        <form>
+          <input
+            required
+            type="text"
+            id="username"
+            class="fadeIn second"
+            name="username"
+            placeholder="username"
+            (input)="userNameChanged(passdata.value)"
+            #passdata
+          />
+          <p id="wrongUserName" *ngIf="userNameError==1">UserName length should greater than 8 caharacter</p>
 
-    <!-- New user -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Don't have account?</a>
-    </div>
+          <input
+            required
+            type="password"
+            id="password"
+            class="fadeIn third"
+            name="login"
+            placeholder="password"
+            (keyup)="passwordChanged(usrdata.value)"
+            #usrdata
+          />
+          <p id="wrongpassword" *ngIf="passwordError==1">password length should greater than 8 caharacter</p>
+          <p id="ExistingUser" *ngIf="ExistingUser==1">sorry,this User is already existing choose another one</p>
+
+          <input type="submit" class="fadeIn fourth" value="Log In" (click)="Login($event)"/>
+          
+        </form>
+        <a class="underlineHover" routerLink="register" (click)="Register()">Don't have account?</a>
   </div>
 </div>

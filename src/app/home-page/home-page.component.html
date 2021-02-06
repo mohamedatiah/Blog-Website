@@ -21,7 +21,7 @@
             <span>Like</span>
        </div>
        <div class="comments" class="inline">
-            <i class="fa fa-comment fa-2x"></i>
+            <i class="fa fa-comment fa-2x" (click)="addcomment()"></i>
             <span>comments</span>
        </div>
 
@@ -33,9 +33,15 @@
        <div class="Share" class="inline">
         <i class="fa fa-share fa-2x"></i>
         <span>Share</span>
-   </div>
+        </div>
+       
    </div>
   
 </div>
+<div class="addcomment" *ngIf="displayAddComment==true">
+<input type="text"  #data minlength="5" maxlength="50">
+<button type="button" (click)="confirmAddcomment($event,data.value)">Comment</button>
+</div>
 <div style="height: 15px"></div>
 </div>
+

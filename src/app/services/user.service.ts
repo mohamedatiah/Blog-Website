@@ -9,10 +9,21 @@ export class UserService {
 
   constructor(public http:HttpClient) { }
  
-  getusers(){
-    return this.http.get<User[]>(' http://myblogger22.herokuapp.com/users/');
-   
+  getusers()
+     {
+       return this.http.get<User[]>(' http://myblogger22.herokuapp.com/users/');
+     }
+  Login(usr:string,password:string)
+  {
+    return this.http.post(' http://myblogger22.herokuapp.com/users/login',{
+      "username":usr,"password":password
+      });
   }
+  //return true if user entered
+  LogedIn(){
+    return !!localStorage.getItem('token');
+  }
+  
 }
 
 
