@@ -63,6 +63,8 @@ passwordError:number=0;
       this.UsersData.Login(this._userName,this._password).subscribe(data=>{
               console.log(data);
                   localStorage.setItem("token",data["token"]);
+                 localStorage.setItem("authorId",data["_id"])
+                
                   this.router.navigateByUrl("home");
               },err=>{
                if(err.status==401){
