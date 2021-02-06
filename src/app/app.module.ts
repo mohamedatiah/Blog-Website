@@ -8,12 +8,13 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { ContactComponent } from './contact/contact.component';
-import{HttpClientModule} from '@angular/common/http'
+import{HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import {HttpClient}from'@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
 import {FormsModule} from '@angular/forms'
 import { AuthGuard } from './guards/auth.guard';
+import {  CustomInterceptor } from './services/auth-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { AuthGuard } from './guards/auth.guard';
     BrowserModule,
     AppRoutingModule,HttpClientModule,FormsModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,{ provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
