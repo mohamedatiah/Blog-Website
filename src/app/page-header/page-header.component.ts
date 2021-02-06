@@ -9,11 +9,19 @@ import { BlogService } from '../services/blog.service';
 })
 export class PageHeaderComponent implements OnInit {
   constructor(public router:Router){router.navigateByUrl("/home")}
-c(e){
-  if(e.target.innerHTML=='home'){
-       
-  }
-}
+/*search(data){
+ 
+  this.blogdata.searchByTitle(data).subscribe(res=>{
+     this.SearchResult=res;
+ })
+
+ const navigationExtras: NavigationExtras = {
+  queryParams:{"data":JSON.stringify(this.SearchResult)}
+ };
+
+ this.router.navigate(['/home'], navigationExtras);
+}*/
+search(e){}
  
 
   

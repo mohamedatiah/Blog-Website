@@ -14,9 +14,10 @@ export class BlogService {
   addpost(blog:Blog){
     return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs',blog);
   }
-  follow(){
-    
+  searchByTitle(title:string){
+    return this.http.get<Blog[]>(`https://myblogger22.herokuapp.com/blogs/title/${title}`);
   }
+ 
 
 }
 

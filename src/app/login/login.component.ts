@@ -57,16 +57,11 @@ passwordError:number=0;
   }
   Login(e:any)
   {
-    console.log(e)
-    console.log(this._userName)
-    console.log(this._password)
-    console.log(this.passwordError)
-    console.log(this.userNameError)
     if(this.passwordError==0&&this.userNameError==0)
     {
       
       this.UsersData.Login(this._userName,this._password).subscribe(data=>{
-              
+              console.log(data);
                   localStorage.setItem("token",data["token"]);
                   this.router.navigateByUrl("home");
               },err=>{
