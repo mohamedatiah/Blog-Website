@@ -13,6 +13,7 @@ firstname:string='';
 lastname:string='';
  follwingNumber=0;
  follwersNumber=0;
+ age:string='';
   constructor(userService:UserService,blogdata:BlogService) {
     
    let id=localStorage.getItem('authorId');
@@ -22,7 +23,7 @@ lastname:string='';
             this.username=element.username;
             this.firstname=element.firstname;
             this.lastname=element.lastname;
-          
+          this.age=element.age;
           element.followings.forEach(element=>{
               this.follwingNumber++;
           })
