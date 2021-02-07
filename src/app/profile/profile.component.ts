@@ -13,6 +13,7 @@ firstname:string='';
 lastname:string='';
  follwingNumber=0;
  follwersNumber=0;
+ title:string='';
  age:string='';
   constructor(userService:UserService,blogdata:BlogService) {
     
@@ -35,10 +36,11 @@ lastname:string='';
           }
         });
       })
+      /*
    blogdata.getSpecificUser(id).subscribe(data=>{
      console.log(data);
    })
-       
+       */
 
    }
 

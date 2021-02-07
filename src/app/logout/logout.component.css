@@ -1,4 +1,11 @@
 @import '../style/card.css';
 .container form{
-    height: 200px;
+    height: 400px;
+    
+}
+
+input[type=submit]
+{
+
+font-size: 20px;
 }

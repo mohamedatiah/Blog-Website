@@ -29,7 +29,7 @@ followedUserData:User;
         })
      userService.getusers().subscribe(data=>{
           this.Users=data;
-         console.log(data)
+        console.log(this.Users)
                 })
   }
    like(e){
