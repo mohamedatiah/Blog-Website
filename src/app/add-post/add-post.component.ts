@@ -43,6 +43,7 @@ export class AddPostComponent implements OnInit {
       this.postError=false;
      
     }
+    console.log(this.blog)
     this.blogData.addpost(this.blog).subscribe(
       a=>
     this.router.navigateByUrl('/profile')

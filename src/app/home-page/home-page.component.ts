@@ -22,16 +22,16 @@ addfollow:boolean=false;
 followedUserData:User;
   constructor(@Inject(DOCUMENT) document,public blogService:BlogService,public userService:UserService,public http:HttpClient,private router:Router) 
   {
-    blogService.getdata().subscribe(data=>{
-      this.Blogs=data;
-      console.log(data)
-  
-          })/*
-          this.route.queryParams.subscribe(params => {
-          let data= JSON.parse(params["data"]);
-         console.log(data)
-        });
-        */
+
+       blogService.getdata().subscribe(data=>{
+       this.Blogs=data;
+       console.log(data)
+        })
+     
+ 
+   
+   
+      
           userService.getusers().subscribe(data=>{
           this.Users=data;
          console.log(data)
@@ -46,7 +46,7 @@ followedUserData:User;
      else{
       var target = e.target || e.srcElement;
       target.style.color = 'blue';
-      console.log(e)
+      
       this.displayAddComment=true;
     }
         
@@ -58,7 +58,10 @@ followedUserData:User;
           
    }
    else{
-         
+    let _authorId=e.path[2].children[1].children[1].children[2].innerText
+    this.blogService.addcomment(_authorId,data).subscribe(data=>{
+      this.displayAddComment=true;
+    })
    }
   }
    getuserbyid(_id){
@@ -88,6 +91,11 @@ followedUserData:User;
          target.style.color='rgba(65, 70, 136, 0.644)';
          this.addfollow=true;
       }
+    }
+    modalflag:boolean=false;
+    openmodal(e,modal){
+       this.modalflag=true;
+       console.log(this.modalflag)
     }
   ngOnInit(): void
    {

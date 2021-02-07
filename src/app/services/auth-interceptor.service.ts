@@ -12,7 +12,7 @@ export class CustomInterceptor implements  HttpInterceptor  {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (req.headers.get("skip"))
-    {console.log("ppppppp")
+    {
        return next.handle(req);
       }
     console.log("Interception In Progress"); //SECTION 1

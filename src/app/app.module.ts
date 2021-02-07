@@ -15,6 +15,8 @@ import { RegisterComponent } from './register/register.component'
 import {FormsModule } from '@angular/forms'
 import { AuthGuard } from './guards/auth.guard';
 import {  CustomInterceptor } from './services/auth-interceptor.service';
+import { LogoutComponent } from './logout/logout.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import {  CustomInterceptor } from './services/auth-interceptor.service';
     AddPostComponent,
     ContactComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
