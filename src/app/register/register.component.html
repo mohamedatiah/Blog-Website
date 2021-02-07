@@ -52,7 +52,11 @@
            
             <div class="form-group">
                 <label>Password:</label>
+<<<<<<< HEAD
                 <input  required pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
+=======
+                <input  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+>>>>>>> a56cc2a04afefd4ddb8fb636891f3b47c5e3a50d
                 title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-control" type="password" name="password" required placeholder="Enter Password" [(ngModel)]='user.password'[ngModelOptions]="{standalone: true}"/>
                 <span class="Error"></span>
             </div>

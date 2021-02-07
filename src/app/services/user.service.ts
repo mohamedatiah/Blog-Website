@@ -33,7 +33,9 @@ export class UserService {
   unfollow(_id:string,data:User){
     return this.http.post(`https://myblogger22.herokuapp.com/users/follow/${_id}`,data);
   }
-  
+  register(user:User){
+    return this.http.post<User>('https://myblogger22.herokuapp.com/users/register',user, {headers:{skip:"true"}});
+  }
 }
 
 
