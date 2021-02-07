@@ -6,12 +6,13 @@
     <a routerLink="contact"><span><i class="fa fa-phone"> </i> Contact</span></a>
     <div class="Search">
         <label>  <input type="search" #searching class="form-control mr-sm-2" ></label>
-        <button class="btn btn-outline-success my-2 my-sm-0"  (click)="search(searching.value)" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0"  (click)="search(searching.value)" type="submit" routerLink="search">Search</button>
      </div>
     <div class="Login" >
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >logout</button>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="login">Login</button>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="register">Register</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  routerLink="logout">logout</button>
+
     </div>
     <div class="animation" ></div>
   

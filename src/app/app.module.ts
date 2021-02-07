@@ -18,6 +18,8 @@ import {  CustomInterceptor } from './services/auth-interceptor.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+import { LogoutComponent } from './logout/logout.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddPostComponent,
     ContactComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

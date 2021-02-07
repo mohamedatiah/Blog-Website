@@ -15,6 +15,7 @@
  <!-- <input (change)="uploadFile($event)" type="file" class="btn btn-primary"  id="UploadedImg"  accept="image/png, image/jpeg ,image/jpg" /> -->
  <!-- [ngModelOptions]="{standalone: true}" -->
  <!-- (change)="uploadFile($event)" -->
+  <input   [(ngModel)]='blog.image' type="file" class="btn btn-primary"  id="UploadedImg" placeholder="Add photo"  accept="image/png, image/jpeg ,image/jpg" [ngModelOptions]="{standalone: true}"/>
 </label>
  </div>
  

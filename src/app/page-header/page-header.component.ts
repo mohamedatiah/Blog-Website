@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
+import { Blog } from '../classes/blog';
 import { BlogService } from '../services/blog.service';
 
 @Component({
@@ -8,21 +9,21 @@ import { BlogService } from '../services/blog.service';
   styleUrls: ['./page-header.component.css']
 })
 export class PageHeaderComponent implements OnInit {
-  constructor(public router:Router){router.navigateByUrl("/home")}
-/*search(data){
- 
-  this.blogdata.searchByTitle(data).subscribe(res=>{
-     this.SearchResult=res;
- })
+searchFlag:boolean=true;
+  SearchResult:Blog[];
+  constructor(public router:Router,public blogdata:BlogService){router.navigateByUrl("/home")}
+search(data){
+localStorage.setItem("search",data);
+this.router.navigate['/search'];
 
- const navigationExtras: NavigationExtras = {
-  queryParams:{"data":JSON.stringify(this.SearchResult)}
- };
+}
 
- this.router.navigate(['/home'], navigationExtras);
-}*/
-search(e){}
- 
+ logout(){
+   localStorage.removeItem('token');
+   localStorage.removeItem('authorId');
+   this.router.navigateByUrl("/home");
+   
+ }
 
   
   ngOnInit(): void {

@@ -1,0 +1,4 @@
+@import '../style/card.css';
+.container form{
+    height: 200px;
+}
