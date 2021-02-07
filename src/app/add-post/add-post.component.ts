@@ -27,7 +27,7 @@ export class AddPostComponent implements OnInit {
 
   myDate= new Date();
 
-   blog:Blog= new Blog([" "],this.myDate,[''],'','','','');
+  blog:Blog= new Blog([" "],this.myDate,[''],'','','','');
   image:File;
   constructor(public router:Router,public blogData:BlogService,public http:HttpClient  ,private formBuilder: FormBuilder) { }
   // uploadFile(event:Event) {

@@ -10,6 +10,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  
 user:User= new User('','','','','','',0,'','','','');
   constructor(public router:Router,public userservice:UserService,public http:HttpClient ) { }
   Adduser(){
