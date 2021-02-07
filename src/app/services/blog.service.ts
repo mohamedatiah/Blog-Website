@@ -25,7 +25,10 @@ export class BlogService {
     return this.http.post<Blog>(`https://myblogger22.herokuapp.com/blogs/comment/${_id}`,{"comments":comment});
 
   }
- 
+  getSpecificUser(_id){
+    return this.http.get<Blog>(`https://myblogger22.herokuapp.com/blogs/getmyblog/${_id}`);
+
+  }
 
 }
 

@@ -11,7 +11,7 @@ import { UserService } from '../services/user.service';
 })
 export class RegisterComponent implements OnInit {
   
-user:User= new User('','','','','','',0,'','','','');
+user:User;
   constructor(public router:Router,public userservice:UserService,public http:HttpClient ) { }
   Adduser(){
     this.userservice.register(this.user.firstname,this.user.lastname,this.user.age,this.user.username,this.user.password).subscribe(
