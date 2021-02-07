@@ -37,7 +37,7 @@ import { SearchComponent } from './search/search.component';
     BrowserModule,
     AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule
   ],
-  providers: [AuthGuard,{ provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

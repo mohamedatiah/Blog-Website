@@ -34,8 +34,12 @@ export class UserService {
     return this.http.post(`https://myblogger22.herokuapp.com/users/follow/${_id}`,data);
   }
   register(f_name,l_name,age,usrname,pass){
+    age=String(age);
+   pass=String(pass);
+    l_name=String(l_name)
+
     return this.http.post<User>('https://myblogger22.herokuapp.com/users/register'
-    ,{"firstname":f_name,"lastname":l_name,"age":age,"username":usrname,"password":"pass"}, {headers:{skip:"true"}});
+    ,{"firstname":f_name,"lastname":l_name,"username":usrname,"age":33,"password":pass}, {headers:{skip:"true"}});
   }
 }
 
