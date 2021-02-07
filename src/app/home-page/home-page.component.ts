@@ -27,12 +27,7 @@ followedUserData:User;
        this.Blogs=data;
        console.log(data)
         })
-     
- 
-   
-   
-      
-          userService.getusers().subscribe(data=>{
+     userService.getusers().subscribe(data=>{
           this.Users=data;
          console.log(data)
                 })
@@ -93,10 +88,12 @@ followedUserData:User;
       }
     }
     modalflag:boolean=false;
-    openmodal(e,modal){
+    openmodal(e,modal)
+    {
        this.modalflag=true;
        console.log(this.modalflag)
     }
+    
   ngOnInit(): void
    {
     
