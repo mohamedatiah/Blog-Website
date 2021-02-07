@@ -1,0 +1,17 @@
+<div class="post" *ngFor="let item of Blogs">
+    <div style="height: 15px"></div>
+   <div class="container">
+  <div class="head">
+
+      <img src='../../assets/p.jpeg'/>
+      <a href="#"></a><!--name-->
+     
+  </div>  
+  <div class="content">
+       <h1>{{item.title}}</h1><!--header for article-->
+       <article><!--article content-->
+          {{item.body}}
+
+       </article>
+     <span style="display:block;">{{item.author}}</span>
+  </div>
