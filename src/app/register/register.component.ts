@@ -15,7 +15,7 @@ user:User= new User('','','','','','',0,'','','','');
   Adduser(){
     this.userservice.register(this.user).subscribe(
       a=>this.router.navigateByUrl('login')
-    )
+        )
   }
   ngOnInit(): void {
   }
