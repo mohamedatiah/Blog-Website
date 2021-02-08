@@ -35,8 +35,12 @@ export class UserService {
   }
   register(f_name,l_name,age,usrname,pass){
     return this.http.post<User>('https://myblogger22.herokuapp.com/users/register'
-    ,{"firstname":f_name,"lastname":l_name,"age":age,"username":usrname,"password":"pass"}, {headers:{skip:"true"}});
+    ,{"firstname":f_name,"lastname":l_name,"age":age,"username":usrname,"password":pass}, {headers:{skip:"true"}});
   }
+  // register(user:User){
+  //   return this.http.post('https://myblogger22.herokuapp.com/users/register',user);
+
+  // }
 }
 
 
