@@ -2,20 +2,18 @@
 <br>
  <h2 class="bg-primary" >Add your post heree :) !</h2>   
  <br>
- <!-- [formGroup] ="postForm" (ngSubmit)="addPost()" -->
+ 
  <form  >
 <div class="form-group shadow-textarea" id="text">
    <div class="form-inline">
    <input type="text" class="form-control"  id="title" placeholder="Title" [(ngModel)]='blog.title' [ngModelOptions]="{standalone: true}"/>
-   <!-- [(ngModel)]='blog.title'[ngModelOptions]="{standalone: true}" -->
   <div class="browse-button">
  <div id="upload_button">
    <label>
  <i class="fa fa-image fa-2x  btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add Image" ></i>
- <!-- <input (change)="uploadFile($event)" type="file" class="btn btn-primary"  id="UploadedImg"  accept="image/png, image/jpeg ,image/jpg" /> -->
- <!-- [ngModelOptions]="{standalone: true}" -->
- <!-- (change)="uploadFile($event)" -->
-  <input   [(ngModel)]='blog.image' type="file" class="btn btn-primary"  id="UploadedImg" placeholder="Add photo"  accept="image/png, image/jpeg ,image/jpg" [ngModelOptions]="{standalone: true}"/>
+ <input (change)="uploadFile($event)" type="file" class="btn btn-primary"  id="UploadedImg"  accept="image/png, image/jpeg ,image/jpg" />
+
+  <!-- <input   [(ngModel)]='blog.image' type="file" class="btn btn-primary"  id="UploadedImg" placeholder="Add photo"  accept="image/png, image/jpeg ,image/jpg" [ngModelOptions]="{standalone: true}"/> -->
 </label>
  </div>
  

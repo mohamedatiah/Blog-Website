@@ -11,12 +11,14 @@ export class BlogService {
   getdata(){
     return this.http.get<Blog[]>('https://myblogger22.herokuapp.com',{headers:{skip:"true"}});
   }
-  // ,formData:FormData
+ 
+  addpostimage(formData:FormData){
+    //with image
+    return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/addimg',formData);
+  //  return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs',blog, {headers:{skip:"true"}});
+  }
   addpost(blog:Blog){
     return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/add',blog);
-    //with image
-   //  return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs',{blog,formData});
-  //  return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs',blog, {headers:{skip:"true"}});
   }
   searchByTitle(title:string){
     return this.http.get<Blog[]>(`https://myblogger22.herokuapp.com/blogs/title/${title}`);
