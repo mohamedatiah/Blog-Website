@@ -27,6 +27,9 @@ export class BlogService {
     return this.http.post<Blog>(`https://myblogger22.herokuapp.com/blogs/comment/${_id}`,{"comments":comment});
 
   }
+  like(id){
+    return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/like/',+id);
+  }
  
 
 }
