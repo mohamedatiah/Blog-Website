@@ -1,6 +1,8 @@
 
-<br>
- <h2 class="bg-primary" >Add your post heree :) !</h2>   
+
+<div class="container">
+  <br>
+ <h2> Say what in your mind</h2>   
  <br>
  <!-- [formGroup] ="postForm" (ngSubmit)="addPost()" -->
  <form  >
@@ -11,6 +13,7 @@
   <div class="browse-button">
  <div id="upload_button">
    <label>
+    
  <i class="fa fa-image fa-2x  btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add Image" ></i>
  <!-- <input (change)="uploadFile($event)" type="file" class="btn btn-primary"  id="UploadedImg"  accept="image/png, image/jpeg ,image/jpg" /> -->
  <!-- [ngModelOptions]="{standalone: true}" -->
@@ -26,6 +29,9 @@
 
   <textarea class="form-control z-depth-1"  id="area" rows="4" placeholder="Write what's on your mind...!" [(ngModel)]='blog.body' [ngModelOptions]="{standalone: true}"></textarea>
   <!-- [(ngModel)]='blog.body' [ngModelOptions]="{standalone: true}" -->
-  <button class="btn btn-primary" type="submit" (click)="addPost()">Submit</button>
+  <button class="btn btn-primary" type="submit" (click)="addPost()">Share</button>
   </div>
   </form>
+
+</div>
+

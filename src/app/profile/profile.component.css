@@ -31,10 +31,13 @@
 .container{
     width: 70%;
     height: 450px;
-    background-color: rgb(107, 109, 218);
+    background-color:lightgrey;
+
     }
     .head{
-        height:50px;
+        height:20px;
+        display: inline-table;
+        
     }
     .head img{
       margin-top: 29px;
@@ -49,9 +52,12 @@
       position: absolute;
       margin-top: 50px;
       margin-left: 10px;
-      font-size
-      : 20px;
+      font-size: 20px;
       
+      
+    }
+    .head{
+        display: block;
     }
     .head a:hover{
         color: firebrick;
@@ -69,7 +75,7 @@
     
     }
     .content h1{
-        color: rgb(107, 109, 218);
+        color: black ;
     }
     .content article{
         word-wrap: break-word;
@@ -111,7 +117,7 @@
         
     }
     i{
-       color:rgba(245, 245, 245, 0.644)
+       color: darkblue;
     }
     i:hover{
         transform: scale(1.5);
@@ -142,8 +148,12 @@
         color: floralwhite;
     }
 
-
-
     .footer{
-        display: none
+        display: flex;
+    }
+    
+    .headeredit-delet{
+        display: block;
+      text-align: end;
+
     }
