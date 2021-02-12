@@ -12,10 +12,13 @@ export class UserService {
   getusers()
      {
        
-     let s= this.http.get<User[]>(' http://myblogger22.herokuapp.com/users/');
-     console.log(s)
-     return s;
+      let s= this.http.get<User[]>(' http://myblogger22.herokuapp.com/users/', {headers:{skip:"true"}});
+      return s;
      }
+     getuser(id){
+      return this.http.get<User>('http://myblogger22.herokuapp.com/users/'+id, {headers:{skip:"true"}})
+    }
+     
   Login(usr:string,password:string)
   {
     return this.http.post(' http://myblogger22.herokuapp.com/users/login',{
@@ -37,7 +40,7 @@ export class UserService {
     age=String(age);
    pass=String(pass);
     l_name=String(l_name)
-
+  
     return this.http.post<User>('https://myblogger22.herokuapp.com/users/register'
     ,{"firstname":f_name,"lastname":l_name,"username":usrname,"age":33,"password":pass}, {headers:{skip:"true"}});
   }

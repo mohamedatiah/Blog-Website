@@ -36,11 +36,11 @@ lastname:string='';
           }
         });
       })
-      /*
+      
    blogdata.getSpecificUser(id).subscribe(data=>{
      console.log(data);
    })
-       */
+       
 
    }
 

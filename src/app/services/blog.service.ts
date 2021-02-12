@@ -26,7 +26,7 @@ export class BlogService {
 
   }
   getSpecificUser(_id){
-    return this.http.get<Blog>(`https://myblogger22.herokuapp.com/blogs/getmyblog/${_id}`);
+    return this.http.get<Blog>(`https://myblogger22.herokuapp.com/users/${_id}`);
 
   }
 
