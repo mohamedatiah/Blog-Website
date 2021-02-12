@@ -1,296 +1,67 @@
-
-<!-- <br>
-
-
-<div class="card" style="width: 18rem;">
-     <img src="../../assets/usericon.png" alt="Card image cap">
-     <div class="card-body">
-       <h5 class="card-title">Card title</h5>
-       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     </div>
-     <ul class="list-group list-group-flush">
-       <li class="list-group-item">Cras justo odio</li>
-       <li class="list-group-item">Dapibus ac facilisis in</li>
-       <li class="list-group-item">Vestibulum at eros</li>
-     </ul>
-     <div class="card-body">        
-          <button class="btn btn-primary">Edit</button>
-          <button class="btn btn-danger">Delete</button>
-     </div>
-   </div> -->
-
-<!-- <div class="card-group" >
-     <div class="card">
-       <img class="card-img-top image" src="../../assets/usericon.png" alt="Card image cap" >
-       <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-         <button class="btn btn-primary">Edit</button>
-         <button class="btn btn-danger">Delete</button>
-       </div>
-     </div>
-     <div class="card">
-       <img class="card-img-top image" src="../../assets/user.jpeg" alt="Card image cap">
-       <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-         <button class="btn btn-primary">Edit</button>
-         <button class="btn btn-danger">Delete</button>
-       </div>
-     </div>
-     <div class="card">
-       <img class="card-img-top image" src="../../assets/usericon.png" alt="card image cap">
-       <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-         <button class="btn btn-primary">Edit</button>
-         <button class="btn btn-danger">Delete</button>
-       </div>
-     </div>
-     <div class="card">
-          <img class="card-img-top image" src="" >
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <button class="btn btn-primary">Edit</button>
-            <button class="btn btn-danger">Delete</button>
-          </div>
-        </div>
-   </div> -->
-   <div class="info">  
-     <img src='../../assets/p.jpeg'/>
-       <p>Mohamed Atiah</p>
+<br>
+<div class="info" >  
+     <img src='../../assets/user.jpeg'/>
+        <p> {{Users.firstname}} {{Users.lastname}}</p>
+      
        <div class="data">
-         <p>age<span>20</span></p>
-         <p>Followers<span>40</span></p>
-         <p>Following<span>30</span></p>
-     </div>
- </div>
- <div class="post">
+         <p>Followers<span>{{this.follwersNumber}}</span></p>
+         <p>Following<span>{{this.follwingNumber}}</span></p>
+       </div>
+       <pre>  <button class="btn btn-info"  >Edit</button> <button class="btn btn-danger" (click)="deleteuser()" >Delete</button></pre> 
+       <!-- (click)="edituser()"(click)="deleteuser()" -->
+    
+</div>
+ <div class="post" *ngFor="let item of Blogs">
      <div style="height: 15px"></div>
  <div class="container">
    <div class="head">
  
-       <img src='../../assets/p.jpeg'/>
-       <a href="#">Mohamed Atiah</a>
+       <!-- <img src='../../assets/p.jpeg'/> -->
       <div  id="tag" >
-         <i class="fa fa-angle-double-right"></i> <span>Tags</span>
+         <i class="fa fa-tags"></i> <span>Tags</span>
            <ul>
-                <li>tag1</li>
+                <li >{{item.tags}}</li>
            </ul>
  
       </div>
    </div>  
    <div class="content">
-        <h1>Humanity</h1>
+        <h1  >{{item.title}}</h1>
         <article>
-            the user has selected ak event of our list items, we’ve added two
-             functions because that event executes any JavaScript code. The first function
-              is searchArticles, which we’ve already explain, and the second one is sidenav
-              .close() which will automatically close our left-side menu once the user has s
+             {{item.body}}
+             <span class="id">{{item._id}}</span>
         </article>
  
        </div>
        <div >
           <div class="likes" class="inline">
                <i class="fa fa-thumbs-up fa-2x" > </i>
-               <span>Like</span>
+               <span></span>
           </div>
           <div class="comments" class="inline">
-               <i class="fa fa-comment fa-2x"   ></i>
+               <i class="fa fa-comment fa-2x"   (click)="showComment($event)" ></i>
                <span>comments</span>
           </div>
      
           <div class="edit" class="inline">
-               <button class="btn btn-primary">Edit</button>
+               <button class="btn btn-primary" (click)="editPost($event)">Edit</button>
                
           </div>
           <div class="inline" >
-           <button class="btn btn-danger">Delete</button>
+           <button class="btn btn-danger" (click)="delete($event)">Delete</button>
           </div>
-         
+        
          
           
       </div>
+     
  </div>
-  
+      <div class="comment"  *ngIf="displayComment==true" >  
+                <ul><li> {{item.comments}}</li></ul> 
+      </div>
+
  </div>
+
  
  <div style="height: 15px"></div>
  
- <!-- <div class="container">
-     <div class="head">
-  
-         <img src='../../assets/p.jpeg'/>
-         <a href="#">Mohamed Atiah</a>
-        
-     </div>  
-     <div class="content">
-          <h1>Humanity</h1>
-          <article>
-              the user has selected ak event of our list items, we’ve added two
-               functions because that event executes any JavaScript code. The first function
-                is searchArticles, which we’ve already explain, and the second one is sidenav
-                .close() which will automatically close our left-side menu once the user has s
-          </article>
-        
-     </div>
-     <div class="footer">
-         <div class="likes" class="inline">
-              <i class="fa fa-thumbs-up fa-2x"></i>
-              <span>Like</span>
-         </div>
-         <div class="comments" class="inline">
-              <i class="fa fa-comment fa-2x"></i>
-              <span>comments</span>
-         </div>
-  
-         <div class="Follow" class="inline">
-              <i class="fa fa-users fa-2x"></i>
-              <span>Follow</span>
-         </div>
-        
-         <div class="Share" class="inline">
-          <i class="fa fa-share fa-2x"></i>
-          <span>Share</span>
-     </div>
-     </div>
-  </div>
-  <div style="height: 15px;color: aqua"></div>
- 
-  <div class="container">
-     <div class="head">
-  
-         <img src='../../assets/p.jpeg'/>
-         <a href="#">Mohamed Atiah</a>
-        
-     </div>  
-     <div class="content">
-          <h1>Humanity</h1>
-          <article>
-              the user has selected ak event of our list items, we’ve added two
-               functions because that event executes any JavaScript code. The first function
-                is searchArticles, which we’ve already explain, and the second one is sidenav
-                .close() which will automatically close our left-side menu once the user has s
-          </article>
-        
-     </div>
-     <div class="footer">
-         <div class="likes" class="inline">
-              <i class="fa fa-thumbs-up fa-2x"></i>
-              <span>Like</span>
-         </div>
-         <div class="comments" class="inline">
-              <i class="fa fa-comment fa-2x"></i>
-              <span>comments</span>
-         </div>
-  
-         <div class="Follow" class="inline">
-              <i class="fa fa-users fa-2x"></i>
-              <span>Follow</span>
-         </div>
-        
-         <div class="Share" class="inline">
-          <i class="fa fa-share fa-2x"></i>
-          <span>Share</span>
-     </div>
-     </div>
-  </div>
-    <div style="height: 15px;color: aqua"></div>
-    <div class="container">
-   <div class="head">
- 
-       <img src='../../assets/p.jpeg'/>
-       <a href="#">Mohamed Atiah</a>
-      
-   </div>  
-   <div class="content">
-        <h1>Humanity</h1>
-        <article>
-            the user has selected ak event of our list items, we’ve added two functions because that event executes any JavaScript code. The first function is searchArticles, which we’ve already explain, and the second one is sidenav.close() which will automatically close our left-side menu once the user has s
-        </article>
-      
-   </div>
-   <div class="footer">
-       <div class="likes" class="inline">
-            <i class="fa fa-thumbs-up fa-2x"></i>
-            <span>Like</span>
-       </div>
-       <div class="comments" class="inline">
-            <i class="fa fa-comment fa-2x"></i>
-            <span>comments</span>
-       </div>
- 
-       <div class="Follow" class="inline">
-            <i class="fa fa-users fa-2x"></i>
-            <span>Follow</span>
-       </div>
-      
-       <div class="Share" class="inline">
-        <i class="fa fa-share fa-2x"></i>
-        <span>Share</span>
-   </div>
-   </div>
- </div>
- 
- <div style="height: 15px;color: aqua"></div>
-    <div class="container">
-   <div class="head">
- 
-       <img src='../../assets/p.jpeg' data-target="#exampleModal"/>
-       <a href="#">Mohamed Atiah</a>
-      
-   </div>  
-   <div class="content">
-        <h1>Humanity</h1>
-        <article>
-            the user has selected ak event of our list items, we’ve added two functions because that event executes any JavaScript code. The first function is searchArticles, which we’ve already explain, and the second one is sidenav.close() which will automatically close our left-side menu once the user has s
-        </article>
-      
-   </div>
-   <div class="footer">
-       <div class="likes" class="inline">
-            <i class="fa fa-thumbs-up fa-2x"></i>
-            <span>Like</span>
-       </div>
-       <div class="comments" class="inline">
-            <i class="fa fa-comment fa-2x" data-target="#exampleModal"></i>
-            <span>comments</span>
-       </div>
- 
-       <div class="Follow" class="inline">
-            <i class="fa fa-users fa-2x"></i>
-            <span>Follow</span>
-       </div>
-      
-       <div class="Share" class="inline">
-        <i class="fa fa-share fa-2x"></i>
-        <span>Share</span>
-   </div>
-   </div>
- </div> -->
- 
- 
-  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>  -->

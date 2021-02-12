@@ -9,6 +9,7 @@ export class UserService {
 
   constructor(public http:HttpClient) { }
  
+  
   getusers()
      {
        
@@ -16,6 +17,9 @@ export class UserService {
      console.log(s)
      return s;
      }
+  getuser(id){
+    return this.http.get<User>('http://myblogger22.herokuapp.com/users/'+id)
+  }
   Login(usr:string,password:string)
   {
     return this.http.post(' http://myblogger22.herokuapp.com/users/login',{
@@ -41,6 +45,13 @@ export class UserService {
   //   return this.http.post('https://myblogger22.herokuapp.com/users/register',user);
 
   // }
+  
+// edituser(editid,f_name,l_name,usrname,pass){
+//     return this.http.patch<User>('https://myblogger22.herokuapp.com/users/'+editid,{"firstname":f_name,"lastname":l_name,"username":usrname,"password":pass})
+// }
+deleteuser(delid){
+  return this.http.delete<User>('https://myblogger22.herokuapp.com/users/'+delid)
+}
 }
 
 
