@@ -10,6 +10,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+<<<<<<< HEAD
   f_nameError:boolean=false;
   l_nameError:boolean=false;
   usernameError:boolean=false;
@@ -48,12 +49,25 @@ export class RegisterComponent implements OnInit {
      e.PreventDefault();
    } 
    else{
+=======
+  
+
+  constructor(public router:Router,public userservice:UserService,public http:HttpClient ) { }
+  Adduser(f_name,l_name,usrname,age,pass){
+    console.log(f_name);
+    
+>>>>>>> a036c6d520d53fd7c9fa68400fa4e12dacf00461
   this.userservice.register(f_name,l_name,usrname,age,pass)
     .subscribe(data=>{
       console.log(data);
     })
+<<<<<<< HEAD
   }
   }
+=======
+    
+    }
+>>>>>>> a036c6d520d53fd7c9fa68400fa4e12dacf00461
   ngOnInit(): void {
   }
 

@@ -20,6 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { LogoutComponent } from './logout/logout.component';
 import { SearchComponent } from './search/search.component';
+import { PostEditComponent } from './post-edit/post-edit.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { SearchComponent } from './search/search.component';
     LoginComponent,
     RegisterComponent,
     LogoutComponent,
-    SearchComponent
+    SearchComponent,
+    PostEditComponent,
+    
   ],
   imports: [
     BrowserModule,

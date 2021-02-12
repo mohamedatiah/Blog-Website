@@ -1,4 +1,4 @@
-.info{
+ .info{
     text-align: center;
 
 }
@@ -31,16 +31,17 @@
 .container{
     width: 70%;
     height: 450px;
-    background-color: rgb(107, 109, 218);
+    background-color: rgba(188, 202, 212, 0.116);
     }
     .head{
         height:50px;
     }
     .head img{
-      margin-top: 29px;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
+      /* margin-top: 29px; */
+        margin-left: 500px;
+        width: 100px;
+        height: 100px;
+        /* border-radius: 50%; */
        
       
     }
@@ -49,8 +50,7 @@
       position: absolute;
       margin-top: 50px;
       margin-left: 10px;
-      font-size
-      : 20px;
+      font-size: 20px;
       
     }
     .head a:hover{
@@ -69,7 +69,7 @@
     
     }
     .content h1{
-        color: rgb(107, 109, 218);
+        color: darkblue;
     }
     .content article{
         word-wrap: break-word;
@@ -111,7 +111,7 @@
         
     }
     i{
-       color:rgba(245, 245, 245, 0.644)
+       color:rgba(21, 4, 83, 0.644)
     }
     i:hover{
         transform: scale(1.5);
@@ -122,17 +122,17 @@
     .inline>span{
         position: absolute;
     margin-top: 4px;
-        margin-left: 10px;
+        margin-left: 20px;
         color: darkblue;
     }
     .inline:nth-child(2){
         margin-left: 90px;
     }
     .inline:nth-child(3){
-        margin-left: 90px;
+        margin-left: 700px;
     }
     .inline:nth-child(4){
-        margin-left: 90px;
+        margin-left: 10px;
     }
     .comments{
        background-color: darkblue;
@@ -141,9 +141,21 @@
         height: 40px;
         color: floralwhite;
     }
+    .comment{
+        text-align: center;
+        width: 70%;
+        background-color:#E5CCFF; 
+        margin-left: 226px;
 
-
-
-    .footer{
-        display: none
     }
+
+
+#tag{
+    float:right;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#E5CCFF; 
+    border-radius: 5px;
+}
+.id{
+    color:white;
+}

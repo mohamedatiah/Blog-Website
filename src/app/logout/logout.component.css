@@ -1,11 +1,19 @@
 @import '../style/card.css';
 .container form{
     height: 400px;
+<<<<<<< HEAD
     
+=======
+    margin-top: 20%;
+>>>>>>> a036c6d520d53fd7c9fa68400fa4e12dacf00461
 }
 
 input[type=submit]
 {
+<<<<<<< HEAD
 
+=======
+margin-top: 10%;
+>>>>>>> a036c6d520d53fd7c9fa68400fa4e12dacf00461
 font-size: 20px;
 }
