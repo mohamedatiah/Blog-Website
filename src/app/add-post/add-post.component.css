@@ -35,13 +35,8 @@ p{
   h2{
       font-family:cursive;
       font-weight: thick;
-<<<<<<< HEAD
       color:black;
       width: 50%;
-=======
-    
-      width: 25%;
->>>>>>> 27abc5f89bf288ededcc955b34119adf5273ded7
       border-radius: 5px;
       opacity: 0.8;
   }
