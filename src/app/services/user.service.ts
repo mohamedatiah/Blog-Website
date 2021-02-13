@@ -37,14 +37,16 @@ export class UserService {
   unfollow(_id:string,data:User){
     return this.http.post(`https://myblogger22.herokuapp.com/users/follow/${_id}`,data);
   }
-  register(f_name,l_name,age,usrname,pass){
-    return this.http.post<User>('https://myblogger22.herokuapp.com/users/register'
-    ,{"firstname":f_name,"lastname":l_name,"age":age,"username":usrname,"password":pass}, {headers:{skip:"true"}});
-  }
-  // register(user:User){
-  //   return this.http.post('https://myblogger22.herokuapp.com/users/register',user);
 
-  // }
+  register(f_name,l_name,usrname,age,pass){
+    age=String(age);
+   pass=String(pass);
+    l_name=String(l_name)
+  
+    return this.http.post<User>('https://myblogger22.herokuapp.com/users/register'
+    ,{"firstname":f_name,"lastname":l_name,"username":usrname,"age":33,"password":pass}, {headers:{skip:"true"}});
+  }
+  
   
 // edituser(editid,f_name,l_name,usrname,pass){
 //     return this.http.patch<User>('https://myblogger22.herokuapp.com/users/'+editid,{"firstname":f_name,"lastname":l_name,"username":usrname,"password":pass})
