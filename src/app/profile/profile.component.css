@@ -36,11 +36,13 @@
     .head{
         height:50px;
     }
-    .head img{
+    .container img{
       /* margin-top: 29px; */
-        margin-left: 500px;
-        width: 100px;
-        height: 100px;
+        /* margin-left: 600px; */
+        float: right;
+        /* width: 200px; */
+        height: 200px; 
+        border:0px white;
         /* border-radius: 50%; */
        
       
@@ -142,7 +144,7 @@
         color: floralwhite;
     }
     .comment{
-        text-align: center;
+        /* text-align: center; */
         width: 70%;
         background-color:#E5CCFF; 
         margin-left: 226px;
