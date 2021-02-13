@@ -3,7 +3,7 @@
      <div style="height: 15px"></div>
     <div class="container">
    <div class="head">
-
+     <span style="display:block;">{{item.author.firstname}} {{item.author.lastname}}</span>
        <img src='../../assets/p.jpeg'/>
        <a href="#"><span style="display:block;">{{item.author.firstname}} {{item.author.lastname}}</span></a><!--name-->
       
@@ -12,7 +12,6 @@
         <h1>{{item.title}}</h1><!--header for article-->
         <article><!--article content-->
            {{item.body}}
-
         </article>
       <span style="display:block;">{{item.author}}</span>
       <span style="display:block;">{{item._id}}</span>

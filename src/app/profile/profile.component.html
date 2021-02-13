@@ -7,29 +7,37 @@
          <p>Followers<span>{{this.follwersNumber}}</span></p>
          <p>Following<span>{{this.follwingNumber}}</span></p>
        </div>
+
        <pre>  <button class="btn btn-info"  (click)="edituser()" >Edit</button> <button class="btn btn-danger" (click)="deleteuser()" >Delete</button></pre> 
        <!-- (click)="edituser()"(click)="deleteuser()" -->
-    
+   
 </div>
  <div class="post" *ngFor="let item of Blogs">
      <div style="height: 15px"></div>
  <div class="container">
+    
    <div class="head">
- 
-       <!-- <img src='../../assets/p.jpeg'/> -->
+      
       <div  id="tag" >
+         
          <i class="fa fa-tags"></i> <span>Tags</span>
            <ul>
                 <li >{{item.tags}}</li>
            </ul>
  
       </div>
+     
    </div>  
+   <!-- <div id="item"><i class="fa fa-history"></i>Posted At:{{item.createdAt | date:'MMMM dd,YY'}}</div> -->
+    
    <div class="content">
         <h1  >{{item.title}}</h1>
+       
         <article>
              {{item.body}}
+
              <span class="id">{{item._id}}</span>
+              <div> <img class="img-responsive" [src]="item.image!=null?item.image:item.image"> </div>
         </article>
  
        </div>

@@ -16,11 +16,13 @@ export class UserService {
       let s= this.http.get<User[]>(' http://myblogger22.herokuapp.com/users/', {headers:{skip:"true"}});
       return s;
      }
+
     
      getuser(id){
       return this.http.get<User>('http://myblogger22.herokuapp.com/users/'+id, {headers:{skip:"true"}})
     }
   
+
 
   Login(usr:string,password:string)
   {
@@ -45,7 +47,8 @@ export class UserService {
     l_name=String(l_name)
   
     return this.http.post<User>('https://myblogger22.herokuapp.com/users/register'
-    ,{"firstname":f_name,"lastname":l_name,"username":usrname,"age":33,"password":pass}, {headers:{skip:"true"}});
+
+    ,{"firstname":f_name,"lastname":l_name,"username":usrname,"age":23,"password":pass}, {headers:{skip:"true"}});
 }
   // register(user:User){
   //   return this.http.post('https://myblogger22.herokuapp.com/users/register',user);
@@ -55,6 +58,7 @@ export class UserService {
  edituser(editid,f_name,l_name,usrname,pass){
     return this.http.patch<User>('https://myblogger22.herokuapp.com/users/'+editid,{"firstname":f_name,"lastname":l_name,"username":usrname,"password":pass})
  }
+
 deleteuser(delid){
   return this.http.delete<User>('https://myblogger22.herokuapp.com/users/'+delid)
 }

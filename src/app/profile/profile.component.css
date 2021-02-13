@@ -36,15 +36,13 @@
     .head{
         height:50px;
     }
-    .head img{
-      /* margin-top: 29px; */
-        margin-left: 500px;
-        width: 100px;
-        height: 100px;
-        /* border-radius: 50%; */
-       
+    .container img{
       
+        float: right;
+        height: 200px; 
+        border:0px white; 
     }
+    
     .head a{
         color: darkred;
       position: absolute;
@@ -142,7 +140,7 @@
         color: floralwhite;
     }
     .comment{
-        text-align: center;
+        /* text-align: center; */
         width: 70%;
         background-color:#E5CCFF; 
         margin-left: 226px;
@@ -157,5 +155,8 @@
     border-radius: 5px;
 }
 .id{
-    color:white;
+     color:white; 
+}
+#item{
+    float: right;
 }
