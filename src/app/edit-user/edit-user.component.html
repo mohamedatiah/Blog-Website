@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,31 +27,27 @@
             </div>
             <div class="form-group">
                 <label>First Name:</label>
-                <input required class="form-control" #f_name minlength="4" type="string" name="fname" required placeholder="Enter Your First Name"/>
+                <input required class="form-control" #f_name minlength="4" type="string"  [(ngModel)]='UserData.firstname'[ngModelOptions]="{standalone: true}" name="fname" required placeholder="Enter Your First Name"/>
                 <span class="Error" *ngIf="f_nameError==true">fisrtName length must be greater than 4</span>
             </div>
             <div class="form-group">
                 <label>Last Name:</label>
-                <input required class="form-control" #l_name type="string" name="lname" required placeholder="Enter Your Last Name"/>
+                <input required class="form-control" #l_name type="string" name="lname"  [(ngModel)]='UserData.lastname'[ngModelOptions]="{standalone: true}" required placeholder="Enter Your Last Name"/>
                 <span class="Error" *ngIf="l_nameError==true"> lastName length must be greater than 4</span>
             </div>
-            <div class="form-group">
-                <label>Age:</label>
-                <input required class="form-control" #age type="string" name="age" required placeholder="Enter Your Age"/>
-                <span class="Error" *ngIf="age==true">age value must be between 15 and 100</span>
-            </div>
+           
              <div class="form-group">
                 <label>User Name:</label>
-                <input required class="form-control"  #usrname type="string" name="username" required placeholder="Enter Your User Name"/>
+                <input required class="form-control"  #usrname type="string" name="username"  [(ngModel)]='UserData.username'[ngModelOptions]="{standalone: true}" required placeholder="Enter Your User Name"/>
                 <span class="Error" *ngIf="usernameError==true">username length must be greater than 8</span>
             </div>
             <div class="form-group">
                 <label>Password:</label>
-                <input  required  #pass
-                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-control" type="string" name="password" required placeholder="Enter Password"/>
+                <input  required  #pass  [(ngModel)]='UserData.password'[ngModelOptions]="{standalone: true}"
+               class="form-control" type="string" name="password" required placeholder="Enter Password"/>
                 <span class="Error" *ngIf="passError==true">password length must be greater than 8</span>
             </div>
             <div class="form-group">
                
-                <input class="btn btn-primary btn-block" type="submit" (click)="Adduser($event,f_name.value,l_name.value,usrname.value,age.value,pass.value)" value="Submit"/>
+                <input class="btn btn-primary btn-block" type="submit" (click)="Adduser($event,f_name.value,l_name.value,usrname.value,pass.value)" value="Update"/>
                </div>

@@ -30,6 +30,7 @@ export class CustomInterceptor implements  HttpInterceptor  {
                 if (error && error.status === 401) {
                     console.log("ERROR 401 UNAUTHORIZED")
                 }
+                alert("sorry you are not Autherized please login first")
                 const err = error.error.message || error.statusText;
                 return throwError(error);                    
            })

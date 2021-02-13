@@ -21,6 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
 import { SearchComponent } from './search/search.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
+import { GetfullNamePipe } from './getfull-name.pipe';
+import { EditUserComponent } from './edit-user/edit-user.component';
+
 
 @NgModule({
   declarations: [
@@ -35,13 +38,15 @@ import { PostEditComponent } from './post-edit/post-edit.component';
     LogoutComponent,
     SearchComponent,
     PostEditComponent,
+    GetfullNamePipe,
+    EditUserComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule,FormsModule,ReactiveFormsModule
   ],
-  providers: [AuthGuard,{ provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }],
+  providers: [AuthGuard,GetfullNamePipe,{ provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

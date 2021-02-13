@@ -29,7 +29,7 @@ export class AddPostComponent implements OnInit {
   myDate= new Date();
 
  
-  blog:Blog= new Blog;
+  blog:Blog=new Blog;
   image!:File;
 
   constructor(public router:Router,public blogData:BlogService,public http:HttpClient, public fb: FormBuilder ) {

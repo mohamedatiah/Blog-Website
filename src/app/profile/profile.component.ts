@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { Router } from '@angular/router';
 import { Blog } from '../classes/blog';
 import { User } from '../classes/user';
->>>>>>> a036c6d520d53fd7c9fa68400fa4e12dacf00461
 import { BlogService } from '../services/blog.service';
 import { UserService } from '../services/user.service';
 
@@ -14,42 +11,6 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-<<<<<<< HEAD
-username:string='';
-firstname:string='';
-lastname:string='';
- follwingNumber=0;
- follwersNumber=0;
- title:string='';
- age:string='';
-  constructor(userService:UserService,blogdata:BlogService) {
-    
-   let id=localStorage.getItem('authorId');
-      userService.getusers().subscribe(data=>{
-        data.forEach(element => {
-          if(element._id==id){
-            this.username=element.username;
-            this.firstname=element.firstname;
-            this.lastname=element.lastname;
-          this.age=element.age;
-          element.followings.forEach(element=>{
-              this.follwingNumber++;
-          })
-          element.followers.forEach(element=>{
-            this.follwersNumber++;
-        })
-         
-           return ;
-          }
-        });
-      })
-      
-   blogdata.getSpecificUser(id).subscribe(data=>{
-     console.log(data);
-   })
-       
-
-=======
 // username:string='';
 // firstname:string='';
 // lastname:string='';
@@ -58,7 +19,7 @@ lastname:string='';
  likes=0;
 //  title:string='';
 //  age:string='';
-comments:string;
+comments:string[];
 displayComment:boolean=false;
  Blogs:Blog[];
  Users:User;
@@ -120,8 +81,8 @@ displayComment:boolean=false;
       this.router.navigateByUrl('home')
       
    }
-       edituser(){
-         //this.router.navigateByUrl('editUser')
+   edituser(){
+         this.router.navigateByUrl('edituser')
 
       }
 
@@ -140,7 +101,6 @@ displayComment:boolean=false;
      )
 
      
->>>>>>> a036c6d520d53fd7c9fa68400fa4e12dacf00461
    }
 
   ngOnInit(): void {
