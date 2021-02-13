@@ -98,7 +98,9 @@ displayComment:boolean=false;
      e.path[4].remove();
       this.blogdata.deletepost(Did).subscribe(
         a=>console.log(a)
-     )   
+     )
+
+     
    }
 
   ngOnInit(): void {

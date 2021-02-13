@@ -8,14 +8,22 @@ import { Router } from '@angular/router';
 })
 export class LogoutComponent implements OnInit {
 
+<<<<<<< HEAD
+  constructor(public router:Router) { 
+    localStorage.removeItem('token');
+    localStorage.removeItem('authorId');
+  }
+=======
   constructor(public router:Router) {
     localStorage.removeItem('token');
     localStorage.removeItem('authorId');
    }
+>>>>>>> a036c6d520d53fd7c9fa68400fa4e12dacf00461
 cancel(){
   this.router.navigateByUrl('home')
 }
-login(){
+login()
+{
   this.router.navigateByUrl('login')
 }
   ngOnInit(): void {

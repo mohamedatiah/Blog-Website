@@ -20,17 +20,25 @@ displayAddComment:boolean=false;
 addlike:boolean=false;
 addfollow:boolean=false;
 followedUserData:User;
+f_name:string;
+i:number;
+myarr:string[];
   constructor(@Inject(DOCUMENT) document,public blogService:BlogService,public userService:UserService,public http:HttpClient,private router:Router) 
   {
+    blogService.getdata().subscribe(data=>{
+      this.Blogs=data;
+      console.log(this.Blogs);
+       })
+    userService.getusers().subscribe(data=>{
+         this.Users=data;
+         })
+             
+    let token=localStorage.getItem('token');
 
-       blogService.getdata().subscribe(data=>{
-       this.Blogs=data;
-       console.log(data)
-        })
-     userService.getusers().subscribe(data=>{
-          this.Users=data;
-         console.log(data)
-                })
+  }
+  getfullname(e){
+     
+   
   }
    like(e){
     var target = e.target || e.srcElement;
@@ -79,7 +87,7 @@ followedUserData:User;
        
      let myuser= this.getuserbyid(_authorId)
       this.userService.follow(_authorId,this.followedUserData).subscribe(data=>{
-        console.log(data);
+     
       })
       }
       else{
@@ -91,11 +99,12 @@ followedUserData:User;
     openmodal(e,modal)
     {
        this.modalflag=true;
-       console.log(this.modalflag)
+     
     }
     
   ngOnInit(): void
    {
+
     
    }
 

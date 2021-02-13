@@ -22,7 +22,7 @@ this.router.navigate['/search'];
    localStorage.removeItem('token');
    localStorage.removeItem('authorId');
    this.router.navigateByUrl("/home");
-   
+   console.log("llllpogg")
  }
 
   
