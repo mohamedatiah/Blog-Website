@@ -37,16 +37,12 @@
         height:50px;
     }
     .container img{
-      /* margin-top: 29px; */
-        /* margin-left: 600px; */
-        float: right;
-        /* width: 200px; */
-        height: 200px; 
-        border:0px white;
-        /* border-radius: 50%; */
-       
       
+        float: right;
+        height: 200px; 
+        border:0px white; 
     }
+    
     .head a{
         color: darkred;
       position: absolute;
@@ -159,5 +155,8 @@
     border-radius: 5px;
 }
 .id{
-    color:white;
+     color:white; 
+}
+#item{
+    float: right;
 }
