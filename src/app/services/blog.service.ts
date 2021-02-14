@@ -23,10 +23,23 @@ export class BlogService {
   searchByTitle(title:string){
     return this.http.get<Blog[]>(`https://myblogger22.herokuapp.com/blogs/title/${title}`);
   }
-  addcomment(_id,comment){
-    return this.http.post<Blog>(`https://myblogger22.herokuapp.com/blogs/comment/${_id}`,{"comments":comment});
-
+  searchByName(title:string){
+    return this.http.get<Blog[]>(`https://myblogger22.herokuapp.com/blogs/title/${title}`);
   }
+  searchByTag(title:string){
+    return this.http.get<Blog[]>(`https://myblogger22.herokuapp.com/blogs/tags/${title}`);
+  }
+  addcomment(_id,comment)
+  {
+    console.log(_id)
+    _id="600ee90d374bfa001552eb48";
+    return this.http.patch<Blog>(`https://myblogger22.herokuapp.com/blogs/comment/${_id}`,{"comments":comment});
+  }
+
+  getSpecificUser(_id){
+    return this.http.get<Blog>(`https://myblogger22.herokuapp.com/users/${_id}`);
+}
+
   like(id){
     return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/like/',+id);
   }

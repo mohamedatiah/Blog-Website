@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
  likes=0;
 //  title:string='';
 //  age:string='';
-comments:string;
+comments:string[];
 displayComment:boolean=false;
  Blogs:Blog[];
  Users:User;
@@ -53,7 +53,9 @@ displayComment:boolean=false;
      data=>{
       console.log(data);
       this.Blogs=data;
-
+          this.Blogs.forEach(element => {
+            console.log(element.likes.length)
+          });
     })
    }
    showComment(e){
@@ -81,11 +83,12 @@ displayComment:boolean=false;
       this.router.navigateByUrl('home')
       
    }
-       edituser(){
-         //this.router.navigateByUrl('editUser')
+   edituser(){
+         this.router.navigateByUrl('edituser')
 
       }
-
+      likees:Number;
+    
 
    editPost(e){
       console.log(e.path[4].children[1].children[1].children[1].children[0].innerText);

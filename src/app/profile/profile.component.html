@@ -7,9 +7,10 @@
          <p>Followers<span>{{this.follwersNumber}}</span></p>
          <p>Following<span>{{this.follwingNumber}}</span></p>
        </div>
-       <pre>  <button class="btn btn-info"  >Edit</button> <button class="btn btn-danger" (click)="deleteuser()" >Delete</button></pre> 
-       
-    
+
+       <pre>  <button class="btn btn-info"  (click)="edituser()" >Edit</button> <button class="btn btn-danger" (click)="deleteuser()" >Delete</button></pre> 
+       <!-- (click)="edituser()"(click)="deleteuser()" -->
+   
 </div>
  <div class="post" *ngFor="let item of Blogs">
      <div style="height: 15px"></div>
@@ -40,7 +41,7 @@
           </div>
        <div >
           <div class="likes" class="inline">
-               <i class="fa fa-thumbs-up fa-2x" > </i>
+               <i class="fa fa-thumbs-up fa-2x" ><span>{{item._id|getfullName}}</span> </i>
                <span></span>
           </div>
           <div class="comments" class="inline">
@@ -69,4 +70,3 @@
 
  
  <div style="height: 15px"></div>
- 

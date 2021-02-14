@@ -1,11 +1,15 @@
-
+<div *ngIf="NodataSearchResult==true">
+  <h1>
+      No data found for this search
+  </h1>
+</div>
 <div class="post" *ngFor="let item of Blogs">
     <div style="height: 15px"></div>
    <div class="container">
   <div class="head">
 
       <img src='../../assets/p.jpeg'/>
-      <a href="#"></a><!--name-->
+      <a href="#"><span style="display:block;">{{item.author.firstname}} {{item.author.lastname}}</span></a><!--name-->
      
   </div>  
   <div class="content">
@@ -16,3 +20,4 @@
        </article>
      <span style="display:block;">{{item.author}}</span>
   </div>
+

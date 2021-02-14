@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AddPostComponent } from './add-post/add-post.component';
 import { ContactComponent } from './contact/contact.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
@@ -27,6 +28,7 @@ import { SearchComponent } from './search/search.component';
     {path:"logout",component:LogoutComponent},
     {path:"search",component:SearchComponent},
     {path:"editPost",component:PostEditComponent},
+    {path:"edituser",component:EditUserComponent},
     
     {path:"notfound",component:NotFoundComponent},
     

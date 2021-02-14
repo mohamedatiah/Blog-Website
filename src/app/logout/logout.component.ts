@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class LogoutComponent implements OnInit {
 
+ 
+
   constructor(public router:Router) {
     localStorage.removeItem('token');
     localStorage.removeItem('authorId');

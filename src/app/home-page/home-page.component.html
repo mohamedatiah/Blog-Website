@@ -3,12 +3,8 @@
      <div style="height: 15px"></div>
     <div class="container">
    <div class="head">
-
-     <!-- <span style="display:block;">{{item.author.firstname}} {{item.author.lastname}}</span> -->
-     <div id="time" >posted At : {{item.createdAt | date:'MMMM dd,YY'}}</div>
-       <img src='../../assets/p.jpeg'/> <span>{{getfullname(  item.author)}}</span><!--name-->
-      
-       
+       <img src='../../assets/p.jpeg'/>
+       <a href="#"><span style="display:block;">{{item.author.firstname}} {{item.author.lastname}}</span></a><!--name-->
       
    </div>  
    <div class="content">
@@ -17,7 +13,7 @@
            {{item.body}}
         </article>
       <span style="display:block;">{{item.author}}</span>
-
+      <span style="display:block;">{{item._id}}</span>
     
      </div>
    <div class="footer">

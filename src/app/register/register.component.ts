@@ -51,7 +51,11 @@ export class RegisterComponent implements OnInit {
   this.userservice.register(f_name,l_name,usrname,age,pass)
     .subscribe(data=>{
       console.log(data);
-    })
+
+    },error => {
+      alert("this user name is already found before change your data please ");
+  })
+
   }
   }
   ngOnInit(): void {
