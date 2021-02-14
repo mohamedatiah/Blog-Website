@@ -36,12 +36,16 @@
     .head{
         height:50px;
     }
-    .container img{
+    /* .container img{
       
         float: right;
         height: 200px; 
         border:0px white; 
-    }
+        margin-bottom: 20px;
+        position: absolute;
+        
+    } */
+
     
     .head a{
         color: darkred;
@@ -63,8 +67,17 @@
         margin-top: 40px;
         height: 70%;
         
-        width: 100%;
+        
     
+    }
+    .content img{
+      
+        float: right;
+        height: 200px; 
+        border:0px white; 
+        margin-bottom: 20px;
+        /* position: static; */
+        
     }
     .content h1{
         color: darkblue;
@@ -74,6 +87,7 @@
         margin: 30px;
         line-height: 28px;
        text-align: justify;
+       /* width: 50%; */
     }
     
     .content h1{
@@ -151,12 +165,20 @@
 #tag{
     float:right;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:#E5CCFF; 
+    /* background-color:#E5CCFF;  */
     border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .id{
      color:white; 
 }
-#item{
+#time{
     float: right;
+    font-style: italic;
 }
+
+#img{
+    
+    width: 50%;
+    float: right;
+} 

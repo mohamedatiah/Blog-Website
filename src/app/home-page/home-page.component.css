@@ -1,1 +1,6 @@
 @import '../style/post.css';
+#time{
+    float:right;
+    font-style: italic;
+    color: darkblue;
+}
