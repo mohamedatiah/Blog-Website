@@ -5,6 +5,10 @@
    <div class="head">
        <img src='../../assets/p.jpeg'/>
        <a href="#"><span style="display:block;">{{item.author.firstname}} {{item.author.lastname}}</span></a><!--name-->
+       <div  id="tag" >
+          <pre><div id="time"><i class="fa fa-history"></i>Posted At:{{item.createdAt | date:'MMMM dd,YY'}}</div>
+                                                     <i class="fa fa-tags"></i> <span>{{item.tags}}</span> </pre>
+                </div>
       
    </div>  
    <div class="content">
@@ -12,9 +16,11 @@
         <article><!--article content-->
            {{item.body}}
         </article>
-      <span style="display:block;">{{item.author}}</span>
-      <span style="display:block;">{{item._id}}</span>
-    
+        
+      <span style="display:none;">{{item.author}}</span>
+      <span style="display:none;">{{item._id}}</span>
+      <span id="img"> <img class="img-responsive" [src]="item.image!=null?item.image:item.image"> </span>
+
      </div>
    <div class="footer">
        <div class="likes" class="inline">
