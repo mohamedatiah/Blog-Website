@@ -54,8 +54,10 @@ myarr:string[];
 
 
    like(e){
-console.log(e)
-let _authorId=e.path[4].children[1].children[1].children[3].innerText;
+    console.log(e)
+    let _authorId=e.path[4].children[1].children[1].children[3].innerText;
+    console.log(_authorId);
+    console.log(typeof _authorId)
     this.blogService.like(_authorId).subscribe(data=>{
       var target = e.target || e.srcElement;
       target.style.color = 'blue';

@@ -53,7 +53,9 @@ displayComment:boolean=false;
      data=>{
       console.log(data);
       this.Blogs=data;
-
+          this.Blogs.forEach(element => {
+            console.log(element.likes.length)
+          });
     })
    }
    showComment(e){
@@ -85,7 +87,8 @@ displayComment:boolean=false;
          this.router.navigateByUrl('edituser')
 
       }
-
+      likees:Number;
+    
 
    editPost(e){
       console.log(e.path[4].children[1].children[1].children[1].children[0].innerText);
