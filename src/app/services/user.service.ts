@@ -35,13 +35,14 @@ export class UserService {
   LogedIn(){
     return !!localStorage.getItem('token');
   }
-  follow(_id:string,data:User){
-    return this.http.post(`https://myblogger22.herokuapp.com/users/follow/${_id}`,data);
+  follow(_id:string,_id2,data:User){
+  
+    return this.http.post(`https://myblogger22.herokuapp.com/users/follow/${_id}/${_id2}`,data);
   }
-  unfollow(_id:string,data:User){
-    return this.http.post(`https://myblogger22.herokuapp.com/users/follow/${_id}`,data);
+  unfollow(_id:string,_id2,data:User){
+    return this.http.post(`https://myblogger22.herokuapp.com/users/unfollow/${_id}/${_id2}`,data);
   }
-  register(f_name,l_name,usrname,age,pass){
+ register(f_name,l_name,usrname,age,pass){
     age=String(age);
    pass=String(pass);
     l_name=String(l_name)

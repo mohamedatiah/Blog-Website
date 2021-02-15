@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   Users:User[];
 NodataSearchResult:boolean=false;
   constructor(blogService:BlogService,public userservice:UserService) {
+    location.reload();
     let search=localStorage.getItem('search');
     blogService.searchByTitle(search).subscribe(res=>{
       if(res.length==0){

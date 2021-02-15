@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { from } from 'rxjs';
 import { Blog} from '../classes/blog'
 import { HttpClient } from '@angular/common/http';
+import { User } from '../classes/user';
 @Injectable({
   providedIn: 'root'
 })
@@ -40,8 +41,11 @@ export class BlogService {
     return this.http.get<Blog>(`https://myblogger22.herokuapp.com/users/${_id}`);
 }
 
-  like(id){
-    return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/like/',+id);
+  like(id,data:User){
+    return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/like/'+id,data);
+  }
+  unlike(id,data:User){
+    return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/unlike/'+id,data);
   }
   getmyblog(id){
     return this.http.get<Blog[]>('https://myblogger22.herokuapp.com/blogs/getmyblog/'+id);

@@ -17,7 +17,7 @@ export class CustomInterceptor implements  HttpInterceptor  {
       }
     console.log("Interception In Progress"); //SECTION 1
     const token: string = localStorage.getItem('token');
-   console.log(token)
+   
     req = req.clone({ headers: req.headers.set('Authorization',  token) });
     req = req.clone({ headers: req.headers.set('Content-Type', 'application/json') });
     req = req.clone({ headers: req.headers.set('Accept', 'application/json') });

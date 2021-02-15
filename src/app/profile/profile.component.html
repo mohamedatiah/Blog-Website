@@ -41,7 +41,7 @@
           </div>
        <div >
           <div class="likes" class="inline">
-               <i class="fa fa-thumbs-up fa-2x" ></i>
+               <i class="fa fa-thumbs-up fa-2x" ><span>{{item.likes.length}}</span></i>
                <span></span>
           </div>
           <div class="comments" class="inline">
@@ -61,12 +61,8 @@
           
        </div>
      
- </div>
-      <div class="comment"  *ngIf="displayComment==true" >  
+ <div class="comment"  *ngIf="displayComment==true" >  
                 <ul><li> {{item.comments}}</li></ul> 
       </div>
-
- </div>
-
  
  <div style="height: 15px"></div>

@@ -26,7 +26,7 @@ import { SearchComponent } from './search/search.component';
     {path:"register",component:RegisterComponent},
     {path:"login",component:LoginComponent},
     {path:"logout",component:LogoutComponent},
-    {path:"search",component:SearchComponent},
+    {path:"search",redirectTo:'search'},
     {path:"editPost",component:PostEditComponent},
     {path:"edituser",component:EditUserComponent},
     

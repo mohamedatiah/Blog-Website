@@ -17,7 +17,7 @@
            {{item.body}}
         </article>
         
-      <span style="display:none;">{{item.author}}</span>
+      <span style="display:block;">{{item.author._id}}</span>
       <span style="display:none;">{{item._id}}</span>
       <span id="img"> <img class="img-responsive" [src]="item.image!=null?item.image:item.image"> </span>
 

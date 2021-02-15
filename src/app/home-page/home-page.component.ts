@@ -24,7 +24,8 @@ followedUserData:User;
 authorForBlogs=[];
 f_name:string;
 myarr:string[];
-
+follwingNumber:number;
+follwersNumber:number;
   constructor(@Inject(DOCUMENT) document,public blogService:BlogService,public userService:UserService,public http:HttpClient,private router:Router) 
   {
     let token=localStorage.getItem('token');
@@ -34,18 +35,28 @@ myarr:string[];
     }
     blogService.getdata().subscribe(data=>{
       this.Blogs=data;
-       data.forEach(element => {
-          element.likes.forEach(element => {
-            if(element==id){
-              
-            }
-          });
-       });
+      console.log(data)
+   
     })
    
+   
+  //  let id=localStorage.getItem('authorId');
     userService.getusers().subscribe(data=>{
-         this.Users=data;
-         })
+      console.log(data)
+      data.forEach(element => {
+        if(element._id==id){
+        this.followedUserData=element;
+        element.followings.forEach(element=>{
+            this.follwingNumber++;
+        })
+        element.followers.forEach(element=>{
+          this.follwersNumber++;
+      })
+       
+         return ;
+        }
+      });
+    })
         
              
     
@@ -54,15 +65,20 @@ myarr:string[];
 
 
    like(e){
-    console.log(e)
+    
     let _authorId=e.path[4].children[1].children[1].children[3].innerText;
-    console.log(_authorId);
-    console.log(typeof _authorId)
-    this.blogService.like(_authorId).subscribe(data=>{
-      var target = e.target || e.srcElement;
+    var target = e.target || e.srcElement;
+    if(target.style.color!='blue'){
+    this.blogService.like(_authorId,this.followedUserData).subscribe(data=>{
       target.style.color = 'blue';
     })
-   
+   }
+   else{
+    this.blogService.unlike(_authorId,this.followedUserData).subscribe(data=>{
+     
+      target.style.color='rgba(65, 70, 136, 0.644)';
+    })
+   }
 
    }
    addcomment(e){
@@ -99,20 +115,32 @@ myarr:string[];
    }
     follow(e){
       var target = e.target || e.srcElement;
-      let _authorId=e.path[4].children[1].children[1].children[2].innerText;
-
-      if(this.addfollow==true){
+      let _authorId:string=e.path[4].children[1].children[1].children[2].innerText;
+      let loginedId=localStorage.getItem('authorId');
+    
+      console.log( _authorId)
+      console.log(loginedId)
+      console.log(typeof loginedId)
+   console.log(e.target.style[0])
+      if(target.style.color!='blue'){
       
        
-     let myuser= this.getuserbyid(_authorId)
-      this.userService.follow(_authorId,this.followedUserData).subscribe(data=>{
+    
+      this.userService.follow(loginedId,_authorId,this.followedUserData).subscribe(data=>{
         target.style.color = 'blue';
-        this.addfollow=false;
+      
+        this.addfollow=true;
+        console.log(data)
       })
       }
       else{
-         target.style.color='rgba(65, 70, 136, 0.644)';
-         this.addfollow=true;
+         
+         this.userService.unfollow(loginedId,_authorId,this.followedUserData).subscribe(data=>{
+         
+          target.style.color='rgba(65, 70, 136, 0.644)';
+          this.addfollow=true;
+          console.log(data)
+        })
       }
     }
     

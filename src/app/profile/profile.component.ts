@@ -29,30 +29,17 @@ displayComment:boolean=false;
       userService.getuser(id).subscribe(
         data=>{
         this.Users=data;
-        data.followers.forEach(data=>this.follwersNumber++)
+        console.log(data)
+       data.followers.forEach(data=>this.follwersNumber++)
         data.followings.forEach(data=>this.follwingNumber++)
         
-        // data.forEach(element => {
-        //   if(element._id==id){
-        //     this.username=element.username;
-        //     this.firstname=element.firstname;
-        //     this.lastname=element.lastname;
-        //   element.followings.forEach(element=>{
-        //       this.follwingNumber++;
-        //   })
-        //   element.followers.forEach(element=>{
-        //     this.follwersNumber++;
-        // })
-         
-        //    return ;
-        //   }
-        // });
      })
       
    blogdata.getmyblog(id).subscribe(
      data=>{
-      console.log(data);
+      console.log(data[0].comments);
       this.Blogs=data;
+
           this.Blogs.forEach(element => {
             console.log(element.likes.length)
           });
@@ -62,8 +49,6 @@ displayComment:boolean=false;
     if(this.displayComment==true)
     { this.displayComment=false}
     else{
-    //  var target = e.target || e.srcElement;
-    //  target.style.color = 'blue';
     this.displayComment=true;
    }
    }
