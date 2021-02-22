@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register  form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="container">
+       <div class="Back">
+            <i class="fa fa-arrow-left" onclick="Back()"></i>
+        </div>
+        <p class="h2 text-center">Form</p>
+        <form action="" method="post">
+            <div class="preview text-center">
+
+                <img class="preview-img" src="../../assets/usericon.png" alt="Preview Image" width="200" height="200"/>
+
+                <img class="preview-img" src="../../assets/usr2.jpeg" alt="Preview Image" width="200" height="200"/>
+                <div class="browse-button">
+                    <i class="fa fa-pencil-alt"></i>
+                    <input class="browse-input" type="file" required name="UploadedFile" id="UploadedFile"/>
+                </div>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>First Name:</label>
+                <input required class="form-control" #f_name minlength="4" type="string"  [(ngModel)]='UserData.firstname'[ngModelOptions]="{standalone: true}" name="fname" required placeholder="Enter Your First Name"/>
+                <span class="Error" *ngIf="f_nameError==true">fisrtName length must be greater than 4</span>
+            </div>
+            <div class="form-group">
+                <label>Last Name:</label>
+                <input required class="form-control" #l_name type="string" name="lname"  [(ngModel)]='UserData.lastname'[ngModelOptions]="{standalone: true}" required placeholder="Enter Your Last Name"/>
+                <span class="Error" *ngIf="l_nameError==true"> lastName length must be greater than 4</span>
+            </div>
+           
+             <div class="form-group">
+                <label>User Name:</label>
+                <input required class="form-control"  #usrname type="string" name="username"  [(ngModel)]='UserData.username'[ngModelOptions]="{standalone: true}" required placeholder="Enter Your User Name"/>
+                <span class="Error" *ngIf="usernameError==true">username length must be greater than 8</span>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input  required  #pass  [(ngModel)]='UserData.password'[ngModelOptions]="{standalone: true}"
+               class="form-control" type="string" name="password" required placeholder="Enter Password"/>
+                <span class="Error" *ngIf="passError==true">password length must be greater than 8</span>
+            </div>
+            <div class="form-group">
+               
+                <input class="btn btn-primary btn-block" type="submit" (click)="Adduser($event,f_name.value,l_name.value,usrname.value,pass.value)" value="Update"/>
+               </div>

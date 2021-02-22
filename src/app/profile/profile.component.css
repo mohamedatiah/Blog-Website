@@ -36,21 +36,23 @@
     .head{
         height:50px;
     }
-    .head img{
-      margin-top: 29px;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-       
+    /* .container img{
       
-    }
+        float: right;
+        height: 200px; 
+        border:0px white; 
+        margin-bottom: 20px;
+        position: absolute;
+        
+    } */
+
+    
     .head a{
         color: darkred;
       position: absolute;
       margin-top: 50px;
       margin-left: 10px;
-      font-size
-      : 20px;
+      font-size: 20px;
       
     }
     .head a:hover{
@@ -65,17 +67,31 @@
         margin-top: 40px;
         height: 70%;
         
-        width: 100%;
+        
     
     }
+    .content img{
+      
+        float: right;
+        height: 200px; 
+        border:0px white; 
+        margin-bottom: 20px;
+        /* position: static; */
+        
+    }
     .content h1{
+<<<<<<< HEAD
         color: rgb(107, 109, 218);
+=======
+        color: darkblue;
+>>>>>>> 18292833fc52717930c19e5e89ef07d5e08eaada
     }
     .content article{
         word-wrap: break-word;
         margin: 30px;
         line-height: 28px;
        text-align: justify;
+       /* width: 50%; */
     }
     
     .content h1{
@@ -141,7 +157,13 @@
         height: 40px;
         color: floralwhite;
     }
+    .comment{
+        /* text-align: center; */
+        width: 70%;
+        background-color:#E5CCFF; 
+        margin-left: 226px;
 
+<<<<<<< HEAD
 
 #tag{
     float:right;
@@ -149,3 +171,28 @@
     background-color: bisque; 
       border-radius: 5px;
 }
+=======
+    }
+
+
+#tag{
+    float:right;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color:#E5CCFF;  */
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.id{
+     color:white; 
+}
+#time{
+    float: right;
+    font-style: italic;
+}
+
+#img{
+    
+    width: 50%;
+    float: right;
+} 
+>>>>>>> 18292833fc52717930c19e5e89ef07d5e08eaada

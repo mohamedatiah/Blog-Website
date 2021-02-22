@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { error } from 'protractor';
 import { Blog } from '../classes/blog';
 import { User } from '../classes/user';
 import { BlogService } from '../services/blog.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-search',
@@ -11,13 +13,27 @@ import { BlogService } from '../services/blog.service';
 export class SearchComponent implements OnInit {
   Blogs:Blog[];
   Users:User[];
-
-  constructor(blogService:BlogService) {
+NodataSearchResult:boolean=false;
+  constructor(blogService:BlogService,public userservice:UserService) {
+    location.reload();
     let search=localStorage.getItem('search');
     blogService.searchByTitle(search).subscribe(res=>{
+      if(res.length==0){
+          blogService.searchByTag(search).subscribe(res=>{
+            if(res.length==0){
+             this.NodataSearchResult=true;
+            }
+            else{
+            this.Blogs=res;
+            }
+          })
+      }
+      else{
       this.Blogs=res;
-      localStorage.removeItem('search');
-      
+      console.log(res.length);
+     
+      }
+      localStorage.removeItem('search'); 
  })
  }
 

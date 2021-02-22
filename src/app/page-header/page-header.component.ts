@@ -14,6 +14,7 @@ searchFlag:boolean=true;
   constructor(public router:Router,public blogdata:BlogService){router.navigateByUrl("/home")}
 search(data){
 localStorage.setItem("search",data);
+location.reload();
 this.router.navigate['/search'];
 
 }
@@ -22,7 +23,7 @@ this.router.navigate['/search'];
    localStorage.removeItem('token');
    localStorage.removeItem('authorId');
    this.router.navigateByUrl("/home");
-   
+   console.log("llllpogg")
  }
 
   
