@@ -1,4 +1,4 @@
- .info{
+.info{
     text-align: center;
 
 }
@@ -31,17 +31,10 @@
 .container{
     width: 70%;
     height: 450px;
-<<<<<<< HEAD
-    background-color:lightgrey;
-
-=======
     background-color: rgba(188, 202, 212, 0.116);
->>>>>>> 27abc5f89bf288ededcc955b34119adf5273ded7
     }
     .head{
-        height:20px;
-        display: inline-table;
-        
+        height:50px;
     }
     .head img{
       margin-top: 29px;
@@ -56,12 +49,9 @@
       position: absolute;
       margin-top: 50px;
       margin-left: 10px;
-      font-size: 20px;
+      font-size
+      : 20px;
       
-      
-    }
-    .head{
-        display: block;
     }
     .head a:hover{
         color: firebrick;
@@ -79,7 +69,7 @@
     
     }
     .content h1{
-        color: black ;
+        color: rgb(107, 109, 218);
     }
     .content article{
         word-wrap: break-word;
@@ -121,11 +111,7 @@
         
     }
     i{
-<<<<<<< HEAD
-       color: darkblue;
-=======
        color:rgba(21, 4, 83, 0.644)
->>>>>>> 27abc5f89bf288ededcc955b34119adf5273ded7
     }
     i:hover{
         transform: scale(1.5);
@@ -156,17 +142,6 @@
         color: floralwhite;
     }
 
-<<<<<<< HEAD
-    .footer{
-        display: flex;
-    }
-    
-    .headeredit-delet{
-        display: block;
-      text-align: end;
-
-    }
-=======
 
 #tag{
     float:right;
@@ -174,5 +149,3 @@
     background-color: bisque; 
       border-radius: 5px;
 }
-     
->>>>>>> 27abc5f89bf288ededcc955b34119adf5273ded7
