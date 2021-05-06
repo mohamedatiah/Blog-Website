@@ -51,10 +51,7 @@ export class UserService {
 
     ,{"firstname":f_name,"lastname":l_name,"username":usrname,"age":23,"password":pass}, {headers:{skip:"true"}});
 }
-  // register(user:User){
-  //   return this.http.post('https://myblogger22.herokuapp.com/users/register',user);
-
-  // }
+ 
  // (_id,f_name,l_name,usrname,pass
  edituser(editid,f_name,l_name,usrname,pass){
     return this.http.patch<User>('https://myblogger22.herokuapp.com/users/'+editid,{"firstname":f_name,"lastname":l_name,"username":usrname,"password":pass})

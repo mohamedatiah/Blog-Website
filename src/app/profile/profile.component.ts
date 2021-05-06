@@ -11,14 +11,11 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-// username:string='';
-// firstname:string='';
-// lastname:string='';
+
  follwingNumber=0;
  follwersNumber=0;
  likes=0;
-//  title:string='';
-//  age:string='';
+
 comments:string[];
 displayComment:boolean=false;
  Blogs:Blog[];
@@ -78,7 +75,7 @@ displayComment:boolean=false;
    editPost(e){
       console.log(e.path[4].children[1].children[1].children[1].children[0].innerText);
       let id=e.path[4].children[1].children[1].children[1].children[0].innerText;
-     // this.router.navigateByUrl('editPost')
+  
     this.router.navigate(['editPost'], {​​ state: {​​ _id: id }​​ }​​);
    }
    delete(e){

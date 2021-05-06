@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-// import { Route } from '@angular/compiler/src/core';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { element } from 'protractor';
+
 import { Blog } from '../classes/blog';
 import { BlogService } from '../services/blog.service';
  import {FormGroup,FormBuilder, FormControl} from '@angular/forms'
@@ -17,13 +17,7 @@ import { DatePipe } from '@angular/common';
 })
 
 export class AddPostComponent implements OnInit {
-  // postForm: FormGroup;
-  // body:string;
-  // tags:string;
-  // title:string;
-  //image:string;
-  //d:string="";
-  //myblog:Blob=null
+ 
   postError:boolean=false;
   newblog: FormGroup;
   myDate= new Date();
@@ -50,16 +44,6 @@ export class AddPostComponent implements OnInit {
      if(this.image){
      const formData=new FormData();
 
-    //  formData.append('title', this.newblog.get('title').value);
-    // formData.append('body', this.newblog.get('body').value);
-    // formData.append('blogImage', this.newblog.get('image').value)
-    // formData.append('tags', this.newblog.get('tags').value)
-    //  console.log(this.newblog.value)
-    //  this.blogData.addpostimage(this.newblog.value).subscribe(
-    //    a => {
-    //      console.log(a);
-    //      this.router.navigateByUrl('home');
-    //   })
      formData.append('image',this.image);
      formData.append('tags',this.blog.tags);
      formData.append('title',this.blog.title);
@@ -86,7 +70,6 @@ export class AddPostComponent implements OnInit {
   uploadFile(event:any){
      const filelist:FileList=event.target.files;
     this.image=filelist[0];
-  //  this.newblog.get('image').setValue(filelist.item[0]);
   }
   ngOnInit(): void {
   

@@ -11,9 +11,4 @@ export class Blog {
     _id!:string;
     constructor(){}
 }
-// constructor(public tags:string,public createdAt:Date,public comments:[string],public image:string,
-//     public title:string,public body:string,public author:string){
-        
-//     }
-// 
 

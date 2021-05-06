@@ -16,7 +16,6 @@ export class BlogService {
   addpostimage(formData:FormData){
     //with image
     return this.http.post('https://myblogger22.herokuapp.com/blogs/addimg',formData);
-  //  return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs',blog, {headers:{skip:"true"}});
   }
   addpost(blog:Blog){
     return this.http.post<Blog>('https://myblogger22.herokuapp.com/blogs/add',blog);
